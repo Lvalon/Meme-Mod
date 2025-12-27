@@ -1,0 +1,26 @@
+SampleCharacterExhibitA:
+  Name: First exhibit
+  Description: |-
+    Adds {Mana} to the mana base. Cards unique to |SampleCharacter| are added to the card pool.
+    At the start of the first turn each combat, add a |Rainbow| to the hand.
+  FlavorText: Flavor text for the first Exhibit.
+
+SampleCharacterExhibitB:
+  Name: Second Exhibit
+  Description: |-
+    Adds {Mana} to the mana base. Cards unique to |SampleCharacter| are added to the card pool.
+    At the end of {PlayerName}'s turn, increase this exhibit's counter by {Value1}.
+    Resets at the end of combat.
+  FlavorText: Some lore accurate description about how this item was used
+
+exmacros:
+  Name: 概念证明
+  Description: |-
+    {PlayerName}的符卡最大充能次数提升一倍，每回合可以施放多次。
+    不会丢失。
+  FlavorText: 「重新树立游戏平衡！」
+
+exmathexhibit:
+  Name: 数学分析器
+  Description: "{PlayerName}的攻击具有|精准|，如已为|精准|则伤害提高 {Counter} 点。"
+  FlavorText: "⑨"

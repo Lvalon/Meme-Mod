@@ -1,0 +1,106 @@
+sememe:
+  Name: Meme
+  Brief: "Will only be included in the |Card pool| after enabling the |Memes Activate!| Pack.\nThis is a |Meme| card, and the |Meme| keyword has no additional effects (as if they arent broken enough lmao)"
+
+seold:
+  Name: Historic
+  Brief: "Will only be included in the |Card pool| after enabling the |Re-version Iterator| Pack.\nThis is a card from a |historic version|, and the |Historic| keyword has no additional effects.\nIf it corresponds to a card that exists in the modern version, the modern card will be shown as a |related card|."
+
+sekotk:
+  Name: I Must OTK!
+  Description: "All attacks deal {Value1} times the damage.\nLose the game when unblocked damage is taken."
+  Brief: "All attacks deal twice as much damage.\nLose the game when unblocked damage is taken."
+
+se9999:
+  Name: Like this
+  Description: "At the end of each turn, gain {Level} |Poison|."
+  Brief: "At the end of each turn, gain |Poison|."
+
+seallfriends:
+  Name: My Friends!
+  Description: "At the start of {PlayerName}'s next turn, put {Level} |Fairy Assembl{Level:plural one='y' other='ies'}| into the hand."
+  Brief: "At the start of {PlayerName}'s next turn, put |Fairy Assembly| into the hand."
+
+seedging:
+  Name: Edging
+  Description: "After playing {Count} cards, gain |Fox Charm| at the start of {PlayerName}'s next turn."
+  Brief: "Each turn, after playing some cards, gain |Fox Charm| at the start of {PlayerName}'s next turn."
+
+sebb:
+  Name: Nah bro stop grinding
+  Description: "Cannot deal damage.\nLoses {SelfName} at the end of the turn."
+  Brief: "Cannot deal damage.\nLoses {SelfName} at the end of the turn."
+
+sesanaeseduction:
+  Name: No Seggs!
+  Description: "After playing {Count} |Sanae's Confession{Count:plural one='' other='s'}|, add |n:1| |Negative News| to the library."
+  Brief: "For every |n:2| times |Sanae's Confession| is played, add |n:1| |Negative News| to the library."
+
+semanaunfreeze:
+  Name: Blatant
+  Description: "The next {Level} card{Level:plural one='' other='s'} played cost{Level:plural one='s' other=''} {Mana} less."
+  Brief: "The next cards plsyed cost {Mana} less."
+
+segg:
+  Name: This is Real!
+  Description: "Whenever {PlayerName} would gain an amount of mana, she gains that much {Mana} instead.\n|Purify| all cards on the battlefield and cards added to the battlefield."
+  Brief: "Whenever {PlayerName} would gain an amount of mana, she gains that much {Mana} instead.\n|Purify| all cards on the battlefield and cards added to the battlefield."
+
+sesanaeconfession:
+  Name: It's love
+  Description: "Wins the combat after {Level} |Loveletters| are played."
+  Brief: "Wins the combat after |Loveletters| are played."
+
+secirnolevel:
+  Name: Hand Pain
+  Description: "At the end of the turn, for every |n:10| cards played, lose {Level} life.\n({Count} cards played this turn)"
+  Brief: "At the end of the turn, for every |n:10| cards played, lose life."
+
+seYonglinCard:
+  Name: The Reclusive Sage
+  Description: "When the first {Level} card{Level:plural one=' is played' other='s are played'} in {PlayerName}'s turn, add a copy of it to the hand. It temporarily costs {Mana} and has |Exile| and |Ethereal|."
+  Brief: "When the first cards are played in {PlayerName}'s turn, add a copy of it to the hand. It temporarily costs {Mana} and has |Exile| and |Ethereal|."
+
+seYonglinCard0:
+  Name: The Reclusive Sage
+  Description: "When the first {Level} card{Level:plural one=' is played' other='s are played'} in {PlayerName}'s turn, add a copy of it to the hand. It temporarily costs {Mana} and has |Exile| and |Ethereal|."
+  Brief: "When the first cards are played in {PlayerName}'s turn, add a copy of it to the hand. It temporarily costs {Mana} and has |Exile| and |Ethereal|."
+
+seWhiteWorld:
+  Name: White World
+  Description: "At the end of {OwnerName}'s turn, gain {Level} |Firepower| and |Spirit|, |Mana Freeze| {Mana}."
+  Brief: "At the end of {OwnerName}'s turn, gain |Firepower| and |Spirit|, |Mana Freeze| {nbMana}."
+
+seFairyTree:
+  Name: Fairies' Abode
+  Description: "{Level} time{Level:plural one='' other='s'}, per turn, when a |Skill| card or |Teammate| enters the hand, gain {Mana} and draw {Level} card."
+  Brief: "When a |Skill| card or |Teammate| enters the hand, gain {Mana} and draw |n:1| card."
+
+seDeepFreeze:
+  Name: Deep Freeze
+  Description: "{OwnerName} takes twice as much damage from all sources.\nLoses {SelfName} at the end of the round."
+  Brief: "{OwnerName} takes twice as much damage from all sources.\nLoses {SelfName} at the end of the round."
+
+seicewingplus1:
+  Name: Ice Wing - Form I
+  Description: "At the start of turn, draw {Level:plural one='% card' other='% cards'}."
+  Brief: "At the start of turn, draw cards."
+
+seicewingplus2:
+  Name: Ice Wing - Form II
+  Description: "At the start of turn, gain {Mana}."
+  Brief: "At the start of turn, gain {Mana}."
+
+seicewingplus3:
+  Name: Ice Wing - Form III
+  Description: "At the start of turn, apply |Cold| to a random enemy {Level:plural one='% time' other='% times'}."
+  Brief: "At the start of turn, apply |Cold| to a random enemy."
+
+searashidad:
+  Name: 5 cost enthusiast
+  Description: "After simping for enough 5 cost cards this turn，gain {Level} |Grace|, |Temporary Firepower| and |Temporary Spirit|."
+  Brief: "After simping for enough 5 cost cards this turn，gain |Grace|, |Temporary Firepower| and |Temporary Spirit|."
+
+semathexhibit:
+  Name: Math Analyzing
+  Description: "At the end of this battle, gain the |Math Analyzer| exhibit, with it {PlayerName}'s attacks are |Accurate|, if they are already |Accurate| then increase their damage by |n:3|."

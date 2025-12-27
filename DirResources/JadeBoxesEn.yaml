@@ -1,0 +1,23 @@
+JadeBoxSwapBlank:
+  Name: All-Accepting
+  Description: "|Lose the starting exhibit| and |gain| Blank Card. Cannot |swap| the exhibit again."
+
+JadeBox5Color:
+  Name: Pentachromatic
+  Description: "Initial |base mana| is replaced by 5 different colors of monochromatic mana.\nAt the start of the first battle, upgrade all cards in the |library| and |battlefield|."
+
+JadeBox7Color:
+  Name: Prismatic
+  Description: Initial |base mana| is replaced by 7 different colors of mana.
+
+JadeBoxBalance:
+  Name: Plasma
+  Description: "During combat, non-|Basic| cards with a total cost of |n:1| or less costs {Mana} more, cards with a total cost of |n:4| or more costs |n:1| random mana less."
+
+JadeBoxFav:
+  Name: My Favourite
+  Description: "(loads for half a minute on start) Remove the base deck and base mana. Choose a card |from the game| to add to the library, then gain base mana equal to |its cost| (generic mana cost component and hybrid mana are replaced with Philosophy mana).\nIf total base mana is less than |n:5|, fill with Philosophy mana. Add |n:5| |Shoots+| and |Boundaries+| to the library."
+
+JadeBoxDouble:
+  Name: Macro Cosmos
+  Description: Go big or go home!

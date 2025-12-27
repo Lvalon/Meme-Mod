@@ -1,0 +1,104 @@
+sememe:
+  Name: 群友
+  Brief: "啟用|群友啟動！|補充包後才會包含在|備選池|內。\n這是屬於|群友|類別的卡牌，無任何額外效果，最多就是有點|超模|（）"
+
+seold:
+  Name: 舊版
+  Brief: "啟用|版本疊代者|補充包後才會包含在|備選池|內。\n這是屬於|舊版|類別的卡牌，無任何額外效果。\n在現版本對應的卡牌（若有）會以|相關卡牌|的形式顯示。"
+
+sekotk:
+  Name: 我要攻殺！
+  Description: "{PlayerName}的攻擊造成 {Value1} 倍傷害。\n受到未被阻擋的攻擊時死亡。"
+  Brief: "{PlayerName}的攻擊造成若干倍傷害。\n受到未被阻擋的攻擊時死亡。"
+
+se9999:
+  Name: 這樣輸
+  Description: "每回合結束時獲得 {Level} 層|毒|。"
+  Brief: "每回合結束時獲得若干層|毒|。"
+
+seallfriends:
+  Name: 友來！
+  Description: "下回合開始時，將 {Level} 張|妖精集結|加入手中。"
+  Brief: "下回合開始時，將若干張|妖精集結|加入手中。"
+
+seedging:
+  Name: 寸止
+  Description: "打出 {Count} 張牌後，下回合開始時獲得|妖狐魅惑|。"
+  Brief: "每回合，如果打出了超過若干張牌，下回合開始時獲得|妖狐魅惑|。"
+
+sebb:
+  Name: 不是哥們，別凹了
+  Description: "無法造成傷害。\n回合結束時失去{SelfName}。"
+  Brief: "無法造成傷害。\n回合結束時失去{SelfName}。"
+
+sesanaeseduction:
+  Name: 不許澀澀！
+  Description: "打出 {Count} 次|早苗の色誘|後，將 |n:1| 張|負面報導|加入牌組。"
+  Brief: "每 |n:2| 次打出|早苗の色誘|後，將 |n:1| 張|負面報導|加入牌組。"
+
+semanaunfreeze:
+  Name: 肆無忌憚
+  Description: "下 {Level} 張牌費用降低{Mana}。"
+  Brief: "之後打出的若干張牌費用降低{Mana}。"
+
+segg:
+  Name: 此乃現實！
+  Description: "{PlayerName}獲得的法力變為{Mana}。\n|淨化|戰場上及本場戰鬥中所有臨時增加的牌。"
+  Brief: "{PlayerName}獲得的法力變為{Mana}。\n|淨化|戰場上及本場戰鬥中所有臨時增加的牌。"
+
+sesanaeconfession:
+  Name: 是愛啊
+  Description: "打出 {Level} 張|情書|後獲得戰鬥勝利。"
+  Brief: "打出若干張|情書|後獲得戰鬥勝利。"
+
+secirnolevel:
+  Name: 手痛
+  Description: "回合結束時，本回合每打出了 |n:10| 張牌，失去 {Level} 點生命。\n（本回合已打出了 {Count} 張）"
+  Brief: "回合結束時，該回合每打出了 |n:10| 張牌，失去 |n:1| 點生命。"
+
+seYonglinCard:
+  Name: 賢者的歸隱
+  Description: "{PlayerName}的每回合使用前 {Level} 張牌後，將一張它暫塑為{Mana}的複製加入手中，這張具有放逐和虛無。"
+  Brief: "{PlayerName}的每回合使用前若干張牌後，將一張它|暫塑|為{Mana}的複製加入手中，這張具有|放逐|和|虛無|。"
+
+seYonglinCard0:
+  Name: 賢者的歸隱
+  Description: "{PlayerName}的每回合使用前 {Level} 張牌後，將一張它暫塑為{Mana}的複製加入手中，這張具有放逐和虛無。"
+  Brief: "{PlayerName}的每回合使用前若干張牌後，將一張它|暫塑|為{Mana}的複製加入手中，這張具有|放逐|和|虛無|。"
+
+seWhiteWorld:
+  Name: 純白的世界
+  Description: "{PlayerName}的回合結束時，獲得 {Level} 點|火力|和|靈力|，|法力凍結|{Mana}。"
+  Brief: "{PlayerName}的回合結束時，獲得若干點|火力|和|靈力|，|法力凍結|{nbMana}。"
+
+seFairyTree:
+  Name: 妖精之樹
+  Description: "當一張|技能|牌或|同伴|牌加入手中時，獲得 {Mana} 並抽 |n:1| 張牌。\n每回合可以觸發 {Level} 次。"
+  Brief: "當一張|技能|牌或|同伴|牌加入手中時，獲得 {Mana} 並抽 |n:1| 張牌。"
+
+seDeepFreeze:
+  Name: 深度凍結
+  Description: "{OwnerName}受到的所有傷害翻倍。\n回合結束時失去{SelfName}。"
+  Brief: "{OwnerName}受到的所有傷害翻倍。\n回合結束時失去{SelfName}。"
+
+seicewingplus1:
+  Name: 冰之翼·壹之形
+  Description: "回合開始時，抽 {Level} 張牌。"
+
+seicewingplus2:
+  Name: 冰之翼·貳之形
+  Description: "回合開始時，獲得{Mana}。"
+
+seicewingplus3:
+  Name: 冰之翼·參之形
+  Description: "回合開始時，對隨機敵人施加|寒冷| {Level} 次。"
+
+searashidad:
+  Name: 玩爹
+  Description: "這回合內盡孝夠後，獲得 {Level} 點|神恩|，|暫得火力|和|暫得靈力|。"
+  Brief: "這回合內盡孝夠後，獲得|神恩|，|暫得火力|和|暫得靈力|。"
+
+semathexhibit:
+  Name: 數學分析中
+  Description: "這場戰鬥結束後獲得展品|數學分析器|，使{PlayerName}的攻擊具有|精準|，如已為|精準|則傷害提高 |n:3| 點。"
+  FlavorText: "⑨"

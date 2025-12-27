@@ -1,0 +1,24 @@
+SampleCharacterExhibitA:
+  Name: First exhibit
+  Description: |-
+    Adds {Mana} to the mana base. Cards unique to |SampleCharacter| are added to the card pool.
+    At the start of the first turn each combat, add a |Rainbow| to the hand.
+  FlavorText: Flavor text for the first Exhibit.
+
+SampleCharacterExhibitB:
+  Name: Second Exhibit
+  Description: |-
+    Adds {Mana} to the mana base. Cards unique to |SampleCharacter| are added to the card pool.
+    At the end of {PlayerName}'s turn, increase this exhibit's counter by {Value1}.
+    Resets at the end of combat.
+  FlavorText: Some lore accurate description about how this item was used
+
+exmacros:
+  Name: Proof of Concept
+  Description: "{PlayerName}'s maximum amount of Spell Card charges is doubled. Her Spell Card can now be used multiple times in a single turn.\nThis lasts until the end of the run."
+  FlavorText: '"Reestablish the game balance!"'
+
+exmathexhibit:
+  Name: Math Analyzer
+  Description: "{PlayerName}'s attacks are |Accurate|, if they are already |Accurate| then increase their damage by {Counter}."
+  FlavorText: "⑨"

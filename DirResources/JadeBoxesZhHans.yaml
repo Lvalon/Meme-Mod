@@ -1,0 +1,23 @@
+JadeBoxSwapBlank:
+  Name: 广纳百川
+  Description: "|换四|空白卡牌。不能再次|换四|。"
+
+JadeBox5Color:
+  Name: 五彩斑斓
+  Description: "初始|基础法力|改为 5 种基本单色法术力。\n第一场战斗开始时，升级|牌组|和|战场|内的所有卡牌。"
+
+JadeBox7Color:
+  Name: 七彩缤纷
+  Description: 初始|基础法力|改为 7 种单色法术力。
+
+JadeBoxBalance:
+  Name: 守恒
+  Description: 战斗內，总费用数量小于或等于 |n:1| 的非|基础|卡牌费用增加{Mana}，总费用数量大于或等于 |n:4| 的卡牌降低 |n:1| 点它的随机费用。
+
+JadeBoxFav:
+  Name: 我的最爱
+  Description: "（启动会卡半分钟）移除初始套牌及基础法力。|从游戏里|选择一张牌加入牌库，并以|该牌的费用|获得基础法力（数字部份及混血以彩色代替）。\n若基础法力不足 |n:5| ，则以|彩色|补上。将 |n:5| 张|射击+|及|结界+|加入牌库。"
+
+JadeBoxDouble:
+  Name: 宏观宇宙
+  Description: 超级加倍！

@@ -1,0 +1,279 @@
+cardlvalon:
+  Name: L大
+  Description: "|戰鬥結束時，此卡沒有被放逐的場合發動。|多掉落一次卡牌獎勵。"
+  UpgradedDescription: "|戰鬥結束時，此卡沒有被放逐的場合發動。|多掉落一次卡牌獎勵。\n|一回合一次，此卡以抽卡方式從抽牌堆加入手中的場合發動。|獲得{Mana}。"
+  DetailText: "{SelfName}不會在戰鬥中被隨機獲得，不能成為複製效果的對象。"
+  FlavorText: "啊這，roll了"
+
+cardshouchang:
+  Name: 授昌
+  Description: "將|春日降臨莉莉白|，|靜謐的月光露娜|，|夏夜之神拉爾瓦|加入手中，她們處於已召喚的狀態。"
+  UpgradedDescription: "將|春日降臨莉莉白+|，|靜謐的月光露娜+|，|夏夜之神拉爾瓦|加入手中，她們處於已召喚的狀態。"
+  FlavorText: "這是發牌員對我的憐憫"
+
+cardanlemi:
+  Name: 安勒米
+  Description: "從 {Value1} 張費用總數為 {Value2} 點的|能力|牌中選擇 {Value3} 張加入手中。"
+  FlavorText: "爹！"
+
+cardaleph:
+  Name: ℵ
+  Description: "|換四|。\n{SelfName}打出後移出戰鬥和牌庫。"
+  UpgradedDescription: "|換四|。\n獲得一個隨機非|光耀|展品。\n{SelfName}打出後移出戰鬥和牌庫。"
+  DetailText: "{SelfName}不會在戰鬥中被隨機獲得，不能成為複製效果的對象。"
+  FlavorText: "9分卡"
+
+cardkotk:
+  Name: 我要攻殺！
+  Description: "獲得{Mana}。\n{PlayerName}造成的攻擊傷害提升 {Value1} 倍。\n受到未被阻擋的攻擊時死亡。"
+  UpgradedDescription: "獲得{Mana}。\n獲得 {Value2} 層|閃避|。\n{PlayerName}造成的攻擊傷害提升 {Value1} 倍。\n受到未被阻擋的攻擊時死亡。"
+  FlavorText: "要在蕾米墮機了"
+
+cardyanling:
+  Name: 言靈
+  Description: "根據 |sl| 次數造成傷害。"
+  ExtraDescription1: "根據 |sl| 次數造成 {Damage} 點傷害。"
+  DetailText: "sl次數能造成的傷害上限為333點。\n公式：\n傷害 = 333 * (1 - e^(-0.01 * sl次數))"
+  FlavorText: "兄弟們我啟動了"
+
+cardedoras:
+  Name: Edoras
+  Description: "獲得相當於|攻略拖更天數|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n{SelfName}打出後移出戰鬥和牌庫。"
+  UpgradedDescription: "獲得相當於|攻略拖更天數|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n下一關強制變化為|商店|。\n{SelfName}打出後移出戰鬥和牌庫。"
+  DetailText: "{SelfName} 不會在戰鬥中被隨機獲得，不能成為複製效果的對象。\n抵達下一關後如果重開當前關卡，原本負責該關卡的人物將會取回該關卡。"
+  FlavorText: "哈基E快寫，從2024年12月28日開始都拖更 {days} 天了"
+
+card9999:
+  Name: 9999護盾怎麼輸？
+  Description: "|放逐|手牌，抽牌堆和棄牌堆中的所有|初始|牌。\n將 |n:1| 張借來一用和伴星飛行加入抽牌堆。\n每回合結束時獲得 {Value2} 層|中毒|。"
+  UpgradedDescription: "|d:放逐手牌，抽牌堆和棄牌堆中的所有初始牌。|\n|d:將 1 張借來一用和伴星飛行加入抽牌堆。|\n|d:每回合結束時獲得 {Value2} 層中毒。|\n抽 {Value1} 張牌。"
+  FlavorText: "《強化後：抽3張牌》"
+
+cardallfriends:
+  Name: 伙伴登場
+  Description: "下回合開始時，將一張|妖精集結|加入手中。"
+  UpgradedDescription: "下回合開始時，將一張|妖精集結|加入手中。將|大妖精|、|小霞|、|蕾蒂|、|拉爾瓦|、|莉莉白|、|露娜|、|斯塔|、|桑尼|、|皮絲|洗入抽牌堆，她們具有|填充|，且處於已召喚的狀態。"
+  FlavorText: "來一場正義的圍毆吧！"
+
+cardprimitive:
+  Name: 原始衝動
+  Description: "獲得 {Value1} 點|火力|。\n每回合如果打出了 {Value2} 或更多張牌，下回合開始時進入|妖狐魅惑|。"
+  FlavorText: "XX是原始需要～"
+
+cardbb:
+  Name: 開凹！
+  Description: "放逐任意數量的手牌。\n獲得{Mana}。\n從|不動的大圖書館|、|幻想的境界八雲紫|、|出入境界|中選擇任意張加入手中。\n本回合無法造成傷害。"
+  UpgradedDescription: "放逐任意數量的手牌。\n獲得{Mana}。\n從|不動的大圖書館|、|幻想的境界八雲紫|、|出入境界|中選擇任意張加入手中。\n從|小錘的魔力|、|池邊起舞|、|除穢|、|降神修行|中選擇任意張加入手中。\n本回合無法造成傷害。"
+  FlavorText: "哇多麼好的機會啊"
+
+cardsanaeseduction:
+  Name: 早苗の色誘
+  Description: "|戰鬥開始時：|不許澀澀！\n獲得 {Value1} 點|暫得火力|，{Value1} 點|暫得靈力|。\n抽 {Value2} 張牌，{PlayerName}打出的下 {Value2} 張牌的費用降低{Mana}。\n|n:1| 名隨機敵人獲得 {Value3} 點|暫失火力|。\n下回合開始時{PlayerName}獲得|妖狐魅惑|。"
+  FlavorText: "這是什麼？澀澀？感覺卡我啟動了"
+
+cardgg:
+  Name: "「現實」"
+  Description: "本場戰鬥中，{PlayerName}獲得的所有法力都轉化為{Mana}。\n|淨化|戰場上及本場戰鬥中所有臨時增加的牌，且費用降低{Mana2}。"
+  UpgradedDescription: "本場戰鬥中，{PlayerName}獲得的所有法力都轉化為{Mana}。\n抽 {Value1} 張牌。\n|淨化|戰場上及本場戰鬥中所有臨時增加的牌，且費用降低{Mana2}。"
+  FlavorText: "~純粹的強大~"
+
+cardsanaeconfession:
+  Name: 早苗の告白
+  Description: "|對戰精英或首領敵人時：|將{SelfName}移出戰鬥，獲得 {Value2} 點|火力|與|靈力|。\n將 {Value1} 張|情書|洗入棄牌堆。\n打出 {Value1} 張|情書|後獲得戰鬥勝利。"
+  UpgradedDescription: "|對戰精英或首領敵人時：|將{SelfName}移出戰鬥，獲得 {Value2} 點|火力|與|靈力|。\n將 {Value1} 張|情書|洗入棄牌堆，它們的費用降低{Mana}。\n打出 {Value1} 張|情書|後獲得戰鬥勝利。"
+  DetailText: "{SelfName}不會在戰鬥中被隨機獲得，不能成為複製效果的對象。"
+  FlavorText: 我喜歡你
+
+cardyoumi:
+  Name: 百級元老
+  Description: "逃離本場戰鬥（不會獲得非|首領敵人|獎勵）。\n打出 {Value1} 或更多次後，{PlayerName}立刻失敗，無法避免。\n（已打出 {used} 次）"
+  UpgradedDescription: "逃離本場戰鬥（不會獲得非|首領敵人|獎勵）。\n打出 {Value1} 或更多次後，{PlayerName}失去一半生命。\n（已打出 {used} 次）"
+  DetailText: "{SelfName}不會在戰鬥中被隨機獲得，不能成為複製效果的對象。"
+  FlavorText: "百級元老，多次發送色情圖片被殺"
+
+cardarashi:
+  Name: Arashi
+  Description: "|回合結束時：|在手裡孝敬後，獲得 {Value1} |火力|。\n獲得雙倍{PlayerName}現有|火力|的|暫得火力|。"
+  FlavorText: "爹，時代變了"
+
+cardbluepoint:
+  Name: 加點！
+  Description: '戰鬥結束時，如果{SelfName}沒有被|放逐|，獲得 {Value1} 點<sprite="Point" name="Point">'
+  DetailText: "{SelfName}不會在戰鬥中被隨機獲得，不能成為複製效果的對象。"
+  FlavorText: "不會卡啟動"
+
+cardcirnolevel:
+  Name: 琪露諾水平牌手
+  Description: "將 {Value1} 張|升天腳|和|清潔能源|加入手中。\n哎唷，|手痛|了。"
+  UpgradedDescription: "將 {Value1} 張|升天腳+|和|清潔能源+|加入手中。\n哎唷，更加|手痛|了。"
+  FlavorText: "沖暈了～"
+
+cardold:
+  Name: 版本疊代者
+  Description: "從 {Value1} 張|p:完全隨機|的|舊版|卡牌中選擇一張加入手中。它|暫塑|為{Mana}，具有|虛無|。"
+  UpgradedDescription: "從 {Value1} 張|p:完全隨機|的|舊版|卡牌中選擇一張加入手中。它|暫塑|為{Mana}。"
+  DetailText: "|e:備選牌|無視法力、顏色和所有者限制。\n不能找到{SelfName}。"
+  FlavorText: "總有人喜歡懷念過去的東西。\n——七曜"
+
+cardDoremyDuplicate:
+  Name: 夢我夢中
+  Description: 選擇一張手牌，將 {Value1} 張的它的複製加入手中。
+  DetailText: 不能以|複製品|為目標。
+  FlavorText: 當哆來咪口渴時，她會重點挑選那些喜歡睡前喝很多水的人的夢境。
+
+cardYonglinCard:
+  Name: 賢者的歸隱
+  Description: "{PlayerName}的每回合使用第一張牌後，將一張它|暫塑|為{Mana}的複製加入手中，這張具有|放逐|和|虛無|。"
+  FlavorText: 智慧之神選擇了逃匿，所以逃匿這算是智慧之行嗎？
+
+cardMystiaSing:
+  Name: 夜雀之歌
+  Description: "對所有敵人施加 {Value1} 點|暫失火力|。\n獲得 {Value2} 點<sprite=\"Point\" name=\"Power\">。"
+  FlavorText: 夜雀能唱出小號和煤氣灶的音色嗎？
+
+cardMeilingBlock:
+  Name: 紅寸勁
+  Description: "獲得 {Block} 點|格擋|和 {Shield} 點|護盾|。\n{SelfName}亦受|火力|加成。"
+  FlavorText: 威脅打人之前先做好挨打的準備。
+
+cardTwoBalls:
+  Name: 平衡之玉
+  Description: 將 {Value1} 張|陰陽玉|加入手中。
+  FlavorText: 無極生太極，太極生兩儀。
+
+cardIceLance:
+  Name: 冰槍術
+  Description: "造成 {Damage} 點傷害。\n對|寒冷|的目標造成 {Value1} 倍傷害。"
+  FlavorText: 據說使用這張符卡時琪露諾總是蹦蹦跳跳的。
+
+cardIceMatrix:
+  Name: 冰凍矩陣
+  Description: "{PlayerName}對敵人施加|寒冷|時，獲得 {Value1} 層|寒冰甲|。\n對所有敵人施加|寒冷|。"
+
+cardLarvaDefense:
+  Name: 振翅飛行
+  Description: "獲得 {Block} 點|格擋|。\n對所有敵人施加 {Value1} 回合|虛弱|和|易傷|。\n如果手中有已召喚的|夏夜之神拉爾瓦|，額外施加 {Value2} 層|中毒|。"
+  FlavorText: 跟在拉爾瓦身後飛行需要勇氣。
+
+cardSummerParty:
+  Name: 冰爽派對
+  Description: "將 {Value1} 張|p:完全隨機|的|同伴|牌加入手中，它處於已召喚的狀態。\n|每支付|{Mana2}：獲得 {Value2} 層|寒冰甲|。\n|每支付|{Mana}：將 {Value1} 張隨機的|同伴|牌加入手中，它處於已召喚的狀態。"
+  UpgradedDescription: "|每支付|{Mana2}：獲得 {Value2} 層|寒冰甲|。\n|每支付|{Mana}：將 {Value1} 張隨機的|同伴|牌加入手中，它處於已召喚的狀態。"
+  DetailText: "|e:備選牌|無視法力、顏色和所有者限制。"
+
+cardWhiteWorld:
+  Name: 純白的世界
+  Description: "{PlayerName}的回合結束時，獲得 {Value1} 點|火力|和|靈力|，|法力凍結|{Mana}。"
+  UpgradedDescription: "獲得 {Value1} 點|火力|和|靈力|。\n{PlayerName}的回合結束時，獲得 {Value1} 點|火力|和|靈力|，|法力凍結|{Mana}。"
+
+cardFairyTree:
+  Name: 妖精之家
+  Description: "當一張|技能|牌或|同伴|牌加入手中時，獲得 {Mana} 並抽 {Value1} 張牌。\n每回合可以觸發 |n:1| 次。"
+
+cardDeepFreeze:
+  Name: 冰尖之舞
+  Description: "對所有敵人造成 {Damage} 點傷害。\n對所有敵人施加|寒冷|，如果目標已經處於|寒冷|，改為施加|深度凍結|。"
+
+cardBladePower:
+  Name: 快閃之銀
+  Description: "抽 {Value2} 張牌。\n|進入手中時|：如果本牌是唯一的手牌，獲得 {Value1} 點|火力|，|放逐|本牌。"
+
+cardFairyWrath:
+  Name: 自然之怒
+  Description: "對所有敵人造成 {Damage} 點傷害。\n如果手中有已召喚的|調查助手大妖精|，將 {Value1} 張|盛夏之花|加入手中。"
+  UpgradedDescription: "對所有敵人造成 {Damage} 點傷害。\n如果手中有已召喚的|調查助手大妖精|，將 {Value1} 張|盛夏之花+|加入手中。"
+
+cardColdChain:
+  Name: 冷鏈物流
+  Description: "從抽牌堆中選擇至多 {Value1} 張加入手中，賦予|保留|。"
+
+cardJinziDoppelganger:
+  Name: 世紀的二重身超人
+  Description: "{PlayerName}的|自然回合|結束時，進行一個額外的回合。\n這一回合開始時不會失去|格擋|，只能打出 {Value1} 張牌。"
+
+cardTaijiLiangyi:
+  Name: 太極生兩儀
+  Description: "將一張|陰陽玉|加入手中。\n{PlayerName}的回合開始時，如果手中沒有|陰陽玉|，將一張|陰陽玉|加入手中。"
+  FlavorText: 靈夢在閱讀"當你有一瓶無限的可樂時可以做什麼"後創造的招式。
+
+cardYaoguaiBuster:
+  Name: 妖怪破壞者
+  Description: "造成 {Damage} 點傷害 {Value2} 次。\n施加 {Value1} 回合|虛弱|。"
+  FlavorText: 不僅能打得妖怪「嗷嗷」叫，還能在升級後打得妖怪「嗷嗷嗷」叫！
+
+cardCleanRoom:
+  Name: 打掃房間
+  Description: "選擇一張手牌丟棄。\n抽 {Value1} 張牌。\n隨機|升級| {Value2} 張手牌。"
+
+cardSakuyaSleep:
+  Name: 稍作休息
+  Description: "獲得{Mana}。"
+  FlavorText: 時停的最佳用法。
+
+cardDropToKnife:
+  Name: 銀之壁壘
+  Description: "棄掉所有的手牌，將等量的|飛刀|加入手中。"
+  FlavorText: "金子過於柔軟不適合做堡壘，雖然銀也差不多。"
+
+cardChangzhizhen:
+  Name: 常置陣
+  Description: "打出後本牌傷害提高 {Value1} 點。\n|保留時：|對隨機敵人造成 {Value3} 點傷害。"
+  FlavorText: 攻擊力等於靈夢的負債，附帶利息。
+
+cardHuanxiangBlock:
+  Name: 幻想防禦
+  Description: "每當一張牌被|放逐|時，{PlayerName}獲得 {Value1} 點|格擋|。"
+  FlavorText: 自從穿越小說在外界流行之後，靈夢的工作就變得更繁忙了。
+
+cardShenziUpgradeAll:
+  Name: 得道升仙
+  Description: "|升級|所有牌，直到本場戰鬥結束。"
+  FlavorText: 仙人見到了八雲紫只能喝茶。
+
+cardicewingplus:
+  Name: 冰之翼·改
+  Description: "抽 {Value1} 張牌，獲得{Mana}。\n每場戰鬥中打出{SelfName} {Value2} 次後，之後打出的{SelfName}效果改為|冰之翼|的效果；打出 {Value6} 次時選擇一種{SelfName}形態生效。\n（現打出 {growcount} 次）"
+  NonbattleDescription: "抽 {Value1} 張牌，獲得{Mana}。\n每場戰鬥中打出{SelfName} {Value2} 次後，之後打出的{SelfName}效果改為|冰之翼|的效果；打出 {Value6} 次時選擇一種{SelfName}形態生效。"
+  FlavorText: 開沒開自己清楚
+
+cardiwoption1:
+  Name: 冰之翼·壹之形
+  Description: "回合開始時，抽 {Value1} 張牌。"
+
+cardiwoption2:
+  Name: 冰之翼·貳之形
+  Description: "回合開始時，獲得{Mana}。"
+
+cardiwoption3:
+  Name: 冰之翼·參之形
+  Description: "回合開始時，對隨機敵人施加|寒冷| {Value1} 次。"
+
+cardfarming:
+  Name: 光耀夜·授昌
+  Description: "如果|牌庫|中有|呼朋喚友|、|出入境界|、|式神護法|或|不動的大圖書館|其中一張，戰鬥結束時回復所有生命值，並使|調查花費時間|增加 {Value1} 分鐘。"
+  UpgradedDescription: "如果|牌庫|中有|呼朋喚友|、|出入境界|、|式神護法|或|不動的大圖書館|其中一張，戰鬥結束時回復所有生命值，並使|調查花費時間|增加 {Value1} 分鐘。\n如果敵人是|克勞恩皮絲|，獲得 {Value2} 點<sprite=\"Point\" name=\"Power\">。"
+  FlavorText: "到底是我在玩遊戲 還是遊戲在玩我"
+
+cardarashidad:
+  Name: 只會玩爹
+  Description: "從|不死的烈焰|、|火力全開|和|世紀的二重身超人|中選擇 {Value1} 張牌加入手中，它|暫塑|為{Mana0}，其他未被選擇的牌|暫塑|為{Mana}並洗入抽牌堆；若在一回合內打出上述所有牌，則獲得 {Value2} 點|神恩|，|暫得火力|和|暫得靈力|。"
+  UpgradedDescription: "從 |Arashi| 、|火力全開|、|「夢想封印 寂」|和|世紀的二重身超人|中選擇 {Value1} 張牌加入手中，它|暫塑|為{Mana0}，其他未被選擇的牌|暫塑|為{Mana}並洗入抽牌堆；若在一回合內打出上述所有牌，則獲得 {Value2} 點|神恩|，|暫得火力|和|暫得靈力|。"
+  FlavorText: "還在爹 還在爹"
+
+cardmathexhibit:
+  Name: 數學分析之書
+  Description: "這場戰鬥結束後獲得展品|數學分析器|，使{PlayerName}的攻擊具有|精準|，如已為|精準|則傷害提高 {Value1} 點。"
+  FlavorText: "⑨"
+
+cardtfm:
+  Name: 滿月護身符是會輸的遊戲
+  Description: "獲得 {Value1} 層|護身符|。\n獲得 {Value2} 點|火力|和|靈力|。\n|法力凍結|{Mana}。\n獲得 {Shield} 層|護盾|。\n獲得 {Value9} 點|火力|。\n打出 {Value1} 張牌後死亡。"
+  FlavorText: "开局满月黑洞魔炮"
+
+cardperfectfumo:
+  Name: 完美 Fumo
+  Description: |-
+    |每支付|<sprite="ManaSprite" name="W"><sprite="ManaSprite" name="W">：下回合抽牌階段結束時，所有手牌|暫時降低| {Value1} 點隨機的費用。
+    |每支付|<sprite="ManaSprite" name="U">：下回開始時獲得{Mana}，並多抽 {Value2} 張牌。
+    結束{PlayerName}的回合，進行一個額外的回合。
+  FlavorText: "9.9 RMB\n特價 包郵"

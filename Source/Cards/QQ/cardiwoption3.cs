@@ -1,0 +1,61 @@
+using LBoL.Base;
+using LBoL.ConfigData;
+using LBoLEntitySideloader.Attributes;
+using System.Collections.Generic;
+using lvalonmeme.Cards.Template;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using lvalonmeme.StatusEffects;
+using lvalonmeme.Packs;
+using LBoL.EntityLib.PlayerUnits;
+using LBoL.EntityLib.StatusEffects.Cirno;
+using LBoL.EntityLib.Cards;
+
+namespace lvalonmeme.Cards
+{
+	public sealed class cardiwoption3Def : lvalonmemecardtemplate
+	{
+		public override CardConfig MakeConfig()
+		{
+			CardConfig config = GetCardDefaultConfig();
+			config.IsPooled = false;
+			config.HideMesuem = true;
+			config.Owner = nameof(Cirno);
+
+			config.TargetType = TargetType.SingleEnemy;
+
+			config.Value1 = 1; // cold count
+
+			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Cost = new ManaGroup { Any = 0 };
+			config.Rarity = Rarity.Common;
+
+			config.Type = CardType.Ability;
+
+			config.RelativeEffects = new List<string>() { nameof(Cold), nameof(sememe) };
+			config.UpgradedRelativeEffects = new List<string>() { nameof(Cold), nameof(sememe) };
+
+			config.RelativeCards = new List<string>() { nameof(cardicewingplus) };
+			config.UpgradedRelativeCards = new List<string>() { nameof(cardicewingplus) };
+
+			config.Pack = nameof(packmemeDef)[..^3];
+
+			config.Illustrator = "和莱";
+
+			config.Index = CardIndexGenerator.GetUniqueIndex(config);
+			return config;
+		}
+	}
+
+	[EntityLogic(typeof(cardiwoption3Def))]
+	public sealed class cardiwoption3 : OptionCard
+	{
+		// 从回合开始多抽1张牌
+		public override IEnumerable<BattleAction> TakeEffectActions()
+		{
+			yield return new ApplyStatusEffectAction<seicewingplus3>(Battle.Player, Value1);
+		}
+	}
+}
+
+
