@@ -10,12 +10,12 @@
   "Tags": [
     "Content"
   ],
-  "PublishedFileId": 0,
+  "PublishedFileId": 3638175244,
   "AuthorId": 76561199402689541,
   "GUID": "llbol.meme.meme",
   "Dependencies": [
     "BepInEx-BepInExPack-5.4.2100",
     "neo.lbol.frameworks.entitySideloader"
   ],
-  "LastUpdateTime": 0
+  "LastUpdateTime": 1767442520
 }
