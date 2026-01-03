@@ -8,5 +8,6 @@ cp -a /Users/e/Desktop/tachyon\ transmigration/projects/indev/lvalonmeme/CHANGEL
 cp -a /Users/e/Desktop/tachyon\ transmigration/projects/indev/lvalonmeme/icon.png lvalonmeme/
 cp -a /Users/e/Desktop/tachyon\ transmigration/projects/indev/lvalonmeme/manifest.json lvalonmeme/
 cp -a /Users/e/Desktop/tachyon\ transmigration/projects/indev/lvalonmeme/README.md lvalonmeme/
+cp -a /Users/e/Desktop/tachyon\ transmigration/projects/indev/lvalonmeme/modinfo.json lvalonmeme/
 rm -fr lvalonmeme/Thumbs.db
 zip -r -j lvalonmeme.zip lvalonmeme/*
