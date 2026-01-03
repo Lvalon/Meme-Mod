@@ -14,20 +14,24 @@ While this mod is highly customizable, its config file also changes drastically.
 
 ## 内含 / Includes
 
-- 群友牌：18
+- 群友牌：25
 - 旧版牌：24+1
-- 玉匣：8
+- 补充包：2
+- 玉匣：6
+- 展品：1
 
-- Meme Cards: 18
+- Meme Cards: 25
 - Historic Cards: 24+1
-- Jadeboxes: 8
+- Booster packs: 2
+- Jadeboxes: 6
+- Exhibit: 1
 
 ### 群友 / Memes
 
 启用`群友启动！`补充包后才会包含在`备选池`内。
 `群友`关键字无任何额外效果，最多就是有点`超模`（）
 
-Will only be included in the `Card pool` after enabling the `Memes Activate!` jadebox.
+Will only be included in the `Card pool` after enabling the `Memes Activate!` Booster Pack.
 The `Meme` keyword has no additional effects (as if they arent broken enough lmao)
 
 ### 旧版 / Historic Cards
@@ -36,15 +40,9 @@ The `Meme` keyword has no additional effects (as if they arent broken enough lma
 `旧版`关键字无任何额外效果。
 在现版本对应的卡牌（若有）会以`相关卡牌`的形式显示。
 
-Will only be included in the `Card pool` after enabling the `Re-version Iterator` jadebox.
+Will only be included in the `Card pool` after enabling the `Re-version Iterator` Booster Pack.
 The `Historic` keyword has no additional effects.
 If it corresponds to a card that exists in the modern version, the modern card will be shown as a `related card`.
-
-### 补充包 / Booster Packs
-
-- `群友启动！`及`版本迭代者`将包含对应的牌。
-
-- `Memes Activate!` and `Re-version Iterator` will include their respective cards.
 
 ### 玉匣 / Jadeboxes
 

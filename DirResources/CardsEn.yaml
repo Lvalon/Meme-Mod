@@ -266,8 +266,8 @@ cardiwoption3:
 
 cardfarming:
   Name: LBoL - 授昌
-  Description: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection| and |Unmoving Great Library|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}."
-  UpgradedDescription: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection| and |Unmoving Great Library|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}.\nIf the enemy is |Clownpiece|, gain {Value2} <sprite=\"Point\" name=\"Power\">."
+  Description: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection| or |Unmoving Great Library|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}."
+  UpgradedDescription: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection| or |Unmoving Great Library|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}.\nIf the enemy is |Clownpiece|, gain {Value2} <sprite=\"Point\" name=\"Power\">."
   FlavorText: Am I playing the game, or is the game playing me?
 
 cardarashidad:
@@ -278,7 +278,7 @@ cardarashidad:
 
 cardmathexhibit:
   Name: Math Analyzing Book
-  Description: "At the end of this battle, gain the |Math Analyzer| exhibit, with it {PlayerName}'s attacks are |Accurate|, if they are already |Accurate| then increase their damage by {Value1}."
+  Description: "At the end of this battle, gain the |Math Analyzer| exhibit, with it {PlayerName}'s attacks are |Accurate|, if they are already |Accurate| then increase their damage by {Value1}.\nAfter {SelfName} is played, it is removed from combat and the library."
   FlavorText: "⑨"
 
 cardtfm:
@@ -295,3 +295,9 @@ cardperfectfumo:
     \ draw an extra card.\nEnd {PlayerName}'s turn. Then, take an extra turn."
   Name: Perfect Fumo
   FlavorText: "9.9 RMB\nspecial offer with free shipping"
+
+cardendofturn:
+  Description: "|At the start of combat|: Exile {SelfName}.\n|At the end of {PlayerName}'s turn|: If there is |\"End of Imperishable Night\"| in the library, but {PlayerName} doesn't have its Status Effect, play a random |\"End of Imperishable Night\"| on the battlefield; remove {SelfName} from combat."
+  Name: End of turn
+  DetailText: "{SelfName} cannot be randomly generated in combat, and cannot be copied."
+  FlavorText: Its the Heart of The Cards, obviously.

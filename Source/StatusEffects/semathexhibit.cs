@@ -1,3 +1,4 @@
+using System.Linq;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
@@ -31,6 +32,7 @@ namespace lvalonmeme.StatusEffects
 
 		private void OnBattleEnding(GameEventArgs args)
 		{
+			if (GameRun.Player.Exhibits.Any(e => e.Config.Id == nameof(exmathexhibit))) return;
 			GameMaster.DebugGainExhibit(Library.CreateExhibit<exmathexhibit>());
 		}
 	}

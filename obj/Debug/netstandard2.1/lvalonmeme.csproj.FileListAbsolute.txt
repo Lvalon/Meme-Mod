@@ -114,3 +114,4 @@
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/obj/Debug/netstandard2.1/lvalonmeme.csproj.Up2Date
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/obj/Debug/netstandard2.1/lvalonmeme.dll
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/obj/Debug/netstandard2.1/lvalonmeme.pdb
+/Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/obj/Debug/netstandard2.1/lvalonmeme.sourcelink.json

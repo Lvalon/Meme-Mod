@@ -1,0 +1,21 @@
+{
+  "Title": "Everyone Is Here",
+  "Description": "(EN/繁/简)\nCrazy general meme mod.\n神金综合整活模组。",
+  "Brief": "(EN/繁/简)\nCrazy general meme mod.\n神金综合整活模组。",
+  "Changelog": [
+    "v0.0.30:\nWorkshop support, booster pack integration.\nView the full changelog in CHANGELOG.md."
+  ],
+  "Version": "0.0.30",
+  "Author": "Lvalon",
+  "Tags": [
+    "Content"
+  ],
+  "PublishedFileId": 0,
+  "AuthorId": 76561199402689541,
+  "GUID": "llbol.meme.meme",
+  "Dependencies": [
+    "BepInEx-BepInExPack-5.4.2100",
+    "neo.lbol.frameworks.entitySideloader"
+  ],
+  "LastUpdateTime": 0
+}

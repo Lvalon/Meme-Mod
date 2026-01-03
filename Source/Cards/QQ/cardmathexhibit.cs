@@ -19,6 +19,7 @@ namespace lvalonmeme.Cards
 			CardConfig config = GetCardDefaultConfig();
 			config.IsPooled = true;
 			config.HideMesuem = false;
+			config.FindInBattle = false;
 			config.Owner = null;
 
 			config.Value1 = 3;
@@ -57,7 +58,15 @@ namespace lvalonmeme.Cards
 			{
 				GameRun.RemoveDeckCard(deckCardByInstanceId, triggerVisual: false);
 			}
-
+			yield return new RemoveCardAction(this);
+		}
+		public override IEnumerable<BattleAction> AfterFollowPlayAction()
+		{
+			Card deckCardByInstanceId = GameRun.GetDeckCardByInstanceId(InstanceId);
+			if (deckCardByInstanceId != null)
+			{
+				GameRun.RemoveDeckCard(deckCardByInstanceId, triggerVisual: false);
+			}
 			yield return new RemoveCardAction(this);
 		}
 	}

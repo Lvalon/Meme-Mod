@@ -262,7 +262,7 @@ cardarashidad:
 
 cardmathexhibit:
   Name: 数学分析之书
-  Description: "这场战斗结束后获得展品|数学分析器|，使{PlayerName}的攻击具有|精准|，如已为|精准|则伤害提高 {Value1} 点。"
+  Description: "这场战斗结束后获得展品|数学分析器|，使{PlayerName}的攻击具有|精准|，如已为|精准|则伤害提高 {Value1} 点。\n{SelfName}打出后移出战斗和牌库。"
   FlavorText: "⑨"
 
 cardtfm:
@@ -277,3 +277,9 @@ cardperfectfumo:
     |每支付|<sprite="ManaSprite" name="U">：下回开始时获得{Mana}，并多抽 {Value2} 张牌。
     结束{PlayerName}的回合，进行一个额外的回合。
   FlavorText: "9.9 RMB\n特价 包邮"
+
+cardendofturn:
+  Description: "|战斗开始时|：放逐{SelfName}。\n|{PlayerName}的回合结束时|：如果|「永夜返」|在牌库，但{PlayerName}没有其状态，则打出战场上的一张随机|「永夜返」|；将{SelfName}移出战斗。"
+  Name: 回合结束时
+  DetailText: "{SelfName}无法在战斗中随机获得，无法成为复制效果的对象。"
+  FlavorText: 没关就是开了

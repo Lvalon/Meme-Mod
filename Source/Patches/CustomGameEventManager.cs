@@ -6,8 +6,11 @@ using HarmonyLib;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
 using LBoL.Core.Randoms;
+using LBoL.Core.StatusEffects;
 using LBoL.EntityLib.Cards.Character.Cirno;
 using LBoL.EntityLib.Cards.Character.Reimu;
 using LBoL.EntityLib.Cards.Character.Sakuya;
@@ -21,6 +24,7 @@ using LBoL.Presentation;
 using LBoL.Presentation.UI;
 using LBoL.Presentation.Units;
 using lvalonmeme.Cards;
+using lvalonmeme.Exhibits;
 using lvalonmeme.JadeBoxes;
 using lvalonmeme.Packs;
 
@@ -137,6 +141,8 @@ namespace lvalonmeme.Patches
 				nameof(cardmathexhibit),
 				nameof(cardtfm),
 				nameof(cardperfectfumo),
+
+				nameof(cardendofturn),
 			};
 		static List<string> oldcardids = new List<string>
 			{
@@ -204,8 +210,6 @@ namespace lvalonmeme.Patches
 		[HarmonyPatch(typeof(CardWeightTable), nameof(CardWeightTable.WeightFor), typeof(CardConfig), typeof(string), typeof(ISet<string>)), HarmonyPostfix]
 		public static void OverrideWeightFor(CardWeightTable __instance, CardConfig cardConfig, string playerId, ISet<string> exhibitOwnerIds, ref float __result)
 		{
-			// if (GameMaster.Instance.CurrentGameRun != null)
-			// {
 			// banlist
 			string[] cardbanarr = toolbox.banlistgetter();
 			foreach (string id in cardbanarr)
@@ -231,62 +235,26 @@ namespace lvalonmeme.Patches
 				__result *= 1f * BepinexPlugin.mult.Value;
 			}
 
-			// meme cards
-			// if (GameMaster.Instance.CurrentGameRun.JadeBoxes.Any((JadeBox jb) => jb.Id == nameof(JadeBoxEnableMemes)))
-			// {
-			// 	float mult = 1f * BepinexPlugin.mult.Value;
-			// 	// fallback no gamerun
-			// 	if (GameMaster.Instance.CurrentGameRun == null)
-			// 	{
-			// 		if (memecardids.Contains(cardConfig.Id))
-			// 		{
-			// 			__result *= mult;
-			// 		}
-			// 	}
-			// 	// in gamerun
-			// 	else
-			// 	{
-			// 		// no copy, and not in battle
-			// 		if (GameMaster.Instance.CurrentGameRun.Battle == null && memecardids.Contains(cardConfig.Id) && !GameMaster.Instance.CurrentGameRun.BaseDeck.Where(x => memecardids.Contains(x.Id)).Select(x => x.Id).ToList().Contains(cardConfig.Id)) // no copy in deck
-			// 		{
-			// 			__result *= mult;
-			// 		}
-			// 	}
-			// }
-			// else if (memecardids.Contains(cardConfig.Id))
-			// {
-			// 	__result = 0f;
-			// }
-
 			// no old cards
-			if ((GameMaster.Instance?.CurrentGameRun?.Packs.Contains(nameof(packoldDef)[..^3]) ?? false) && oldcardbanids.Contains(cardConfig.Id))
+			if ((GameMaster.Instance?.CurrentGameRun?.Packs.Contains(nameof(packoldDef)[..^3]) ?? false)
+			&& oldcardbanids.Contains(cardConfig.Id))
 			{
 				__result = 0f;
 			}
-			// }
+
+			// 沒開就是關了
+			if (cardConfig.Id == nameof(cardmathexhibit) && GameMaster.Instance?.CurrentGameRun != null
+			&& (GameMaster.Instance.CurrentGameRun.Player?.Exhibits?.Any(e => e.Config.Id == nameof(exmathexhibit)) ?? false))
+			{
+				__result = 0f;
+			}
+
+			// 沒開就是關了
+			if (cardConfig.Id == nameof(cardendofturn) && GameMaster.Instance?.CurrentGameRun != null
+			&& !GameMaster.Instance.CurrentGameRun.BaseDeck.Any(x => x.Id == nameof(HuiyeSuperExtraTurn)))
+			{
+				__result = 0f;
+			}
 		}
-
-		// [HarmonyPatch(typeof(GameRunController), nameof(GameRunController.CreateValidCardsPool), typeof(CardWeightTable), typeof(ManaGroup?), typeof(bool), typeof(bool), typeof(bool), typeof(Predicate<CardConfig>)), HarmonyPostfix]
-		// public static void AlterWeights(GameRunController __instance, CardWeightTable weightTable, ManaGroup? manaLimit, bool colorLimit, bool applyFactors, bool battleRolling, Predicate<CardConfig> filter, ref UniqueRandomPool<Type> __result)
-		// {
-		//     if (!battleRolling)
-		//     {
-		//         __result = __result.WithAlteredWeights(rollableCard => cards.Contains(rollableCard.Elem.Name) ? 100000000f * rollableCard.Weight : rollableCard.Weight);
-		//     }
-		// }
 	}
-	// public static class UniqueRandomPoolExtensions
-	// {
-	//     public static UniqueRandomPool<T> WithAlteredWeights<T>(this UniqueRandomPool<T> pool, Func<RandomPoolEntry<T>, float> weightFunc)
-	//     {
-	//         UniqueRandomPool<T> newPool = new UniqueRandomPool<T>(pool._fallback);
-
-	//         foreach (var entry in pool)
-	//         {
-	//             newPool.Add(entry.Elem, weightFunc(entry));
-	//         }
-
-	//         return newPool;
-	//     }
-	// }
 }

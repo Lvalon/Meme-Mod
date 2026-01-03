@@ -1,6 +1,6 @@
 {
   "name": "Everyone_Is_Here",
-  "version_number": "0.0.29",
+  "version_number": "0.0.30",
   "website_url": "http://localhost/",
   "description": "神金综合整活模组。Crazy general meme mod. Contains meme cards, historical cards and some fun jadeboxes while we're at it.",
   "dependencies": [ "BepInEx-BepInExPack-5.4.2100", "TeamNeo-Sideloader-0.5.0", "TeamNeo-Uncapped_Jadeboxes-1.0.1"]

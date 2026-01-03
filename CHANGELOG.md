@@ -1,5 +1,22 @@
 # 更新日志 / Changelog
 
+## [0.0.30] - 2026-1-3
+
+### 修复 / Fixed
+
+- 一些 bug。
+- Some bugs.
+
+### 改动 / Changes
+
+- 补充包化群友和旧版卡牌。
+- Migrated QQ community member cards and Historic cards to booster packs.
+
+### 新增 / Added
+
+- QQ 群友牌数量提升至 25 张。
+- Number of QQ community member cards increased to 25.
+
 ## [0.0.29] - 2025-7-2
 
 ### 修复 / Fixed

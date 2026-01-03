@@ -21,7 +21,7 @@ namespace lvalonmeme.Cards
 			CardConfig config = GetCardDefaultConfig();
 			config.IsPooled = true;
 			config.HideMesuem = false;
-			config.Owner = null;
+			config.Owner = "Cirno";
 
 			config.Colors = new List<ManaColor>() { ManaColor.Green, ManaColor.Blue };
 			config.Cost = new ManaGroup { Green = 3, Blue = 2 };

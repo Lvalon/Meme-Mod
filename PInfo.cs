@@ -7,7 +7,7 @@ namespace lvalonmeme
 		// each loaded plugin needs to have a unique GUID. usually author+generalCategory+Name is good enough
 		public const string GUID = "llbol.meme.meme";
 		public const string Name = "llvalonmeme";
-		public const string version = "0.0.29";
+		public const string version = "0.0.30";
 		public static readonly Harmony harmony = new Harmony(GUID);
 
 	}

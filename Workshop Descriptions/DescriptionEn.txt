@@ -1,0 +1,47 @@
+(EN/繁/簡)
+Crazy general meme mod.
+Contains meme (community-suggested) cards and some old cards from older versions to the game, plus some fun jadeboxes while we're at it.
+
+[h1]Includes[/h1]
+[list]
+[*]Meme Cards: 25
+[*]Historic Cards: 24+1
+[*]Booster packs: 2
+[*]Jadeboxes: 6
+[*]Exhibit: 1
+[/list]
+
+[h1]Memes[/h1]
+Will only be included in the Card pool after enabling the Memes Activate! Booster Pack.
+The Meme keyword has no additional effects (as if they arent broken enough lmao)
+
+[h1]Historic Cards[/h1]
+Will only be included in the Card pool after enabling the Re-version Iterator Booster Pack.
+The Historic keyword has no additional effects.
+If it corresponds to a card that exists in the modern version, the modern card will be shown as a related card.
+
+[h1]Jadeboxes[/h1]
+[*]All-Accepting swaps the starting exhibit with a custom exhibit. Swaps with Blank Card by default.
+[*]Pentachromatic replaces the initial base mana with 5 different colors of monochromatic mana. By default, at the start of the first battle, upgrade all cards in the library and battlefield.
+[*]Prismatic replaces the initial base mana with 7 different colors of mana.
+[*]When Plasma is enabled, during combat, non-Basic cards with a total cost of 1 or less costs 1 more, cards with a total cost of 4 or more costs 1 random mana less. Thresholds can be configured in the config file.
+[*]My Favourite removes the base deck and base mana, then choose a card from the game to add to the library, gain base mana equal to its cost (generic mana cost component and hybrid mana are replaced with Philosophy mana), then if total base mana is less than 5, fill with Philosophy mana, and finally add 5 Shoots+ and Boundaries+ to the library. (can cancel the basic card support and gain a Philosophy base mana instead in the config file)
+[*]Macro Cosmos can double a lot of things in the game, and has the Pyramid-Shaped Puzzle effect.
+
+[h1]Config File[/h1]
+[*]Meme Card Non-Battle Weight Mult: Multiplies non-battle weight of meme cards by the set multiplier.
+[*]Card Banlist: Bans selected cards from being rolled in the game.
+[*]Card Whitelist: Cards not in the Card Whitelist will be added to the Card Banlist, and the original cards in the Card Banlist will be overrwritten. (WARNING!!! Please fill in enough cards to ensure that the shop, card generation and event cards don't softlock due to having too small of a card pool)
+[*]Custom Card List: Cards in the Custom Card List are affected by the Custom Card Weight Mult.
+[*]Other mod preferences.
+
+[h1]Also[/h1]
+Bug reports, card suggestions (whether it is meme or a historic card) are appreciated. For feedback, post your suggestions in the modding channel in the Lbol discord.
+
+[h1]Special Thanks[/h1]
+[list]
+[*]Everyone in the QQ official group for submitting commissions passionately, this has shaped the concept of this mod.
+[*]bullytou for drafting the first generation of meme cards.
+[*]"Re-version Iterator" 授昌 for pioneering the creative directions of this mod.
+[*]Everyone in the Discord official server's #mod-dev channel for helping out with all the coding problems.
+[/list]

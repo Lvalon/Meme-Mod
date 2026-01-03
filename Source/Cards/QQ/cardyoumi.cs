@@ -101,6 +101,18 @@ namespace lvalonmeme.Cards
 			}
 			return base.AfterUseAction();
 		}
+
+
+		public override IEnumerable<BattleAction> AfterFollowPlayAction()
+		{
+			DeckCounter += 1;
+			Card deckCardByInstanceId = Battle.GameRun.GetDeckCardByInstanceId(InstanceId);
+			if (deckCardByInstanceId != null)
+			{
+				deckCardByInstanceId.DeckCounter = DeckCounter;
+			}
+			return base.AfterFollowPlayAction();
+		}
 	}
 }
 

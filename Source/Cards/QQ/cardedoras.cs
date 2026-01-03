@@ -94,8 +94,6 @@ namespace lvalonmeme.Cards
 			yield return new RemoveCardAction(this);
 			yield break;
 		}
-
-		// Token: 0x060009FB RID: 2555 RVA: 0x000151F2 File Offset: 0x000133F2
 		public override IEnumerable<BattleAction> AfterFollowPlayAction()
 		{
 			Card deckCardByInstanceId = base.GameRun.GetDeckCardByInstanceId(base.InstanceId);
