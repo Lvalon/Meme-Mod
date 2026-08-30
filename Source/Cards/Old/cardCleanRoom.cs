@@ -70,14 +70,20 @@ namespace lvalonmeme.Cards
 		}
 		protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
 		{
-			if (precondition != null)
-			{
-				if (oneTargetHand != null)
-				{
-					yield return new DiscardAction(oneTargetHand);
-				}
-			}
-			yield return new DrawManyCardAction(Value1);
+            if (precondition != null)
+            {
+                Card card = ((SelectHandInteraction)precondition).SelectedCards[0];
+                if (card != null)
+                {
+                    yield return new DiscardAction(card);
+                }
+            }
+            else if (oneTargetHand != null)
+            {
+                yield return new DiscardAction(this.oneTargetHand);
+                oneTargetHand = null;
+            }
+            yield return new DrawManyCardAction(Value1);
 			yield return UpgradeRandomHandAction(Value2, CardType.Unknown);
 			yield break;
 		}

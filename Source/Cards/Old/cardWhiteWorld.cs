@@ -56,7 +56,12 @@ namespace lvalonmeme.Cards
 				yield return BuffAction<Firepower>(Value1, 0, 0, 0, 0.2f);
 				yield return BuffAction<Spirit>(Value1, 0, 0, 0, 0.2f);
 			}
-			yield return new ApplyStatusEffectAction<seWhiteWorld>(Battle.Player, Value1, null, 1, null, 0f, true);
+
+            int count = 1;
+			if (Battle.Player.TryGetStatusEffect<seWhiteWorld>(out var whiteWorld))
+				count = whiteWorld.Count++;
+
+            yield return new ApplyStatusEffectAction<seWhiteWorld>(Battle.Player, Value1, null, count, null, 0f, true);
 			yield break;
 		}
 	}
