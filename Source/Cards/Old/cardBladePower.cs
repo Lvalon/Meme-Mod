@@ -1,15 +1,17 @@
 using LBoL.Base;
 using LBoL.ConfigData;
-using LBoLEntitySideloader.Attributes;
-using System.Collections.Generic;
-using lvalonmeme.Cards.Template;
+using LBoL.Core;
 using LBoL.Core.Battle;
-using LBoL.Core.Cards;
 using LBoL.Core.Battle.BattleActions;
-using lvalonmeme.StatusEffects;
+using LBoL.Core.Battle.Interactions;
+using LBoL.Core.Cards;
 using LBoL.Core.StatusEffects;
 using LBoL.EntityLib.Cards.Character.Sakuya;
+using LBoLEntitySideloader.Attributes;
+using lvalonmeme.Cards.Template;
 using lvalonmeme.Packs;
+using lvalonmeme.StatusEffects;
+using System.Collections.Generic;
 
 namespace lvalonmeme.Cards
 {
@@ -50,7 +52,12 @@ namespace lvalonmeme.Cards
 	[EntityLogic(typeof(cardBladePowerDef))]
 	public sealed class cardBladePower : lvalonmemecard.oldcard
 	{
-		private IEnumerable<BattleAction> EnterHandReactor()
+        protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
+        {
+            yield return new DrawManyCardAction(Value2);
+            yield break;
+        }
+        private IEnumerable<BattleAction> EnterHandReactor()
 		{
 			if (Battle.BattleShouldEnd || Zone != CardZone.Hand)
 			{
