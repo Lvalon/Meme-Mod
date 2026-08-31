@@ -41,12 +41,15 @@ namespace lvalonmeme.StatusEffects
 		private IEnumerable<BattleAction> OnTurnEnding(UnitEventArgs args)
 		{
 			int loss = Convert.ToInt32(Math.Floor((double)(Count / 10))) * Level;
-			if (Battle.BattleShouldEnd || loss == 0)
+			if (Battle.BattleShouldEnd)
 			{
 				yield break;
 			}
 			NotifyActivating();
-			yield return DamageAction.LoseLife(Owner, loss, "Poison");
+			if (loss > 0)
+			{
+				yield return DamageAction.LoseLife(Owner, loss, "Poison");
+			}
 			Count = 0;
 			Highlight = false;
 			yield break;

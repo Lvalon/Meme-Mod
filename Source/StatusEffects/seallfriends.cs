@@ -10,21 +10,21 @@ using LBoLEntitySideloader.Attributes;
 
 namespace lvalonmeme.StatusEffects
 {
-    public sealed class seallfriendsDef : lvalonmemesetemplate
-    {
-        public override StatusEffectConfig MakeConfig()
-        {
-            StatusEffectConfig config = GetDefaultStatusEffectConfig();
-            return config;
-        }
-    }
-
-    [EntityLogic(typeof(seallfriendsDef))]
-    public sealed class seallfriends : StatusEffect
-    {
-        protected override void OnAdded(Unit unit)
+	public sealed class seallfriendsDef : lvalonmemesetemplate
+	{
+		public override StatusEffectConfig MakeConfig()
 		{
-            ReactOwnerEvent(Owner.TurnStarted, new EventSequencedReactor<UnitEventArgs>(OnTurnStarting));
+			StatusEffectConfig config = GetDefaultStatusEffectConfig();
+			return config;
+		}
+	}
+
+	[EntityLogic(typeof(seallfriendsDef))]
+	public sealed class seallfriends : StatusEffect
+	{
+		protected override void OnAdded(Unit unit)
+		{
+			ReactOwnerEvent(Owner.TurnStarted, new EventSequencedReactor<UnitEventArgs>(OnTurnStarting));
 		}
 
 		private IEnumerable<BattleAction> OnTurnStarting(UnitEventArgs args)
@@ -34,9 +34,9 @@ namespace lvalonmeme.StatusEffects
 				yield break;
 			}
 			NotifyActivating();
-            yield return new AddCardsToDrawZoneAction(Library.CreateCards<GatherFairy>(Level, false), DrawZoneTarget.Random, AddCardsType.Normal);
+			yield return new AddCardsToHandAction(Library.CreateCards<GatherFairy>(Level, false), AddCardsType.Normal);
 			yield return new RemoveStatusEffectAction(this, true, 0.1f);
 			yield break;
 		}
-    }
+	}
 }

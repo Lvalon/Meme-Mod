@@ -71,16 +71,12 @@ namespace lvalonmeme.Cards
 		}
 		protected override void OnEnterBattle(BattleController battle)
 		{
-			ReactBattleEvent(Battle.BattleEnding, new EventSequencedReactor<GameEventArgs>(OnBattleEnding));
+			HandleBattleEvent(Battle.BattleEnding, OnBattleEnding);
 		}
 
-		private IEnumerable<BattleAction> OnBattleEnding(GameEventArgs args)
+		private void OnBattleEnding(GameEventArgs args)
 		{
-			EnemyType enemyType = Battle.EnemyGroup.EnemyType;
-			List<Card> list = (from card in Battle.EnumerateAllCardsButExile()
-							   where card == this
-							   select card).ToList();
-			if (list.Count > 0)
+			if (Zone != CardZone.Exile)
 			{
 				switch (GameRun.CurrentStation.Type)
 				{
@@ -100,7 +96,6 @@ namespace lvalonmeme.Cards
 						break;
 				}
 			}
-			yield break;
 		}
 	}
 }
