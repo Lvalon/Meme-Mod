@@ -425,15 +425,25 @@ namespace lvalonmeme
 		//PERSISTENT VALUES
 		public class lvalonmemedata : CustomGameRunSaveData
 		{
-			public override void Restore(GameRunController gameRun)
+			public int modifier;
+			public int CanReward;
+
+            public override void Restore(GameRunController gameRun)
 			{
 				//log.LogDebug("lvalonmeme bepinex restoring");
-			}
+				cardhezuo1hao.modifier = modifier;
+				cardlvalon.CanReward = CanReward;
+                Stage_GetEnemyCardReward_PostPatch.canReward = -1;
+                Stage_GetEliteEnemyCardReward_PostPatch.canReward = -1;
+                Stage_GetBossCardReward_PostPatch.canReward = -1;
+            }
 
 			public override void Save(GameRunController gameRun)
 			{
 				//log.LogDebug("lvalonmeme bepinex saving");
 				//youmiplayed = 1;
+				modifier = cardhezuo1hao.modifier;
+				CanReward = cardlvalon.CanReward;
 			}
 			//public int youmiplayed;
 		}

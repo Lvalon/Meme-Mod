@@ -102,3 +102,7 @@ semathexhibit:
   Name: 数学分析中
   Description: "这场战斗结束后获得展品|数学分析器|，使{PlayerName}的攻击具有|精准|，如已为|精准|则伤害提高 |n:3| 点。"
   FlavorText: "⑨"
+
+semodifier:
+  Name: 前缀
+  Brief: "升级时随机获得以下四种前缀之一并获得其效果。\n  护佑——{PlayerName}受到的攻击伤害降低 |n:4| 点。\n 幸运——{PlayerName}造成的攻击伤害有 |n:4|% 的概率提高 |n:100|%。\n  险恶——{PlayerName}造成的攻击伤害提高 |n:4| 点。\n 奥秘——{PlayerName}的回合开始时，获得一点随机法力。"
