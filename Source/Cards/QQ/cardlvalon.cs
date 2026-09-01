@@ -5,6 +5,7 @@ using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Cards;
 using LBoL.Core.Stations;
+using LBoL.EntityLib.Adventures;
 using LBoL.Presentation;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Resource;
@@ -80,11 +81,6 @@ namespace lvalonmeme.Cards
         }
 		protected override void OnEnterBattle(BattleController battle)
 		{
-			Debug.Log("aaa");
-			CanReward = 0;
-			Stage_GetEnemyCardReward_PostPatch.canReward = -1;
-			Stage_GetEliteEnemyCardReward_PostPatch.canReward = -1;
-			Stage_GetBossCardReward_PostPatch.canReward= -1;
 			HandleBattleEvent(Battle.BattleEnding, OnBattleEnding);
 		}
 
@@ -145,6 +141,17 @@ namespace lvalonmeme.Cards
                 canReward--;
                 Singleton<GameMaster>.Instance.CurrentGameRun.CurrentStation.AddReward(__instance.GetBossCardReward());
             }
+        }
+    }
+    [HarmonyPatch(typeof(GameRunController), nameof(GameRunController.EnterBattle))]
+    class GameRunController_EnterBattle_PostPatch
+    {
+        static void Postfix(Stage __instance)
+        {
+            cardlvalon.CanReward = 0;
+            Stage_GetEnemyCardReward_PostPatch.canReward = -1;
+            Stage_GetEliteEnemyCardReward_PostPatch.canReward = -1;
+            Stage_GetBossCardReward_PostPatch.canReward = -1;
         }
     }
 }

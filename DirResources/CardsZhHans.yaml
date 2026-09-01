@@ -285,7 +285,8 @@ cardendofturn:
   FlavorText: 没关就是开了
 
 cardhezuo1hao:
-  Description: "|手牌中|：{PlayerName}免疫于所有负面状态，无视精准攻击，受到的攻击伤害降低 |n:4| 点。\n|合成|：如果牌库中有|防暴盾|、|一次性护符|和|急救箱|且牌库中没有{SelfName}，分别将其移除牌库各一张，将{SelfName}加入牌库"
+  Description: "|手牌中|：{PlayerName}免疫于所有负面状态，无视精准攻击，受到的攻击伤害降低 |n:4| 点。\n|合成|：如果牌库中有|防暴盾|、|一次性护符|和|急救箱|且牌库中没有{SelfName}，分别将其移除牌库各一张，将{SelfName}加入牌库。"
+  UpgradedDescription: "|手牌中|：{PlayerName}免疫于所有负面状态，无视精准攻击，受到的攻击伤害降低 |n:4| 点。\n|合成|：如果牌库中有|防暴盾|、|一次性护符|和|急救箱|且牌库中没有{SelfName}，分别将其移除牌库各一张，将{SelfName}加入牌库。\n<b>限定技，锁定技，</b>当{SelfName}因为抽牌动作进入手牌时，你获得一点{Mana}。当你的回合结束时，重置此技能。"
   Name: "十字章护盾"
   DetailText: "{SelfName}无法在战斗中随机获得，无法成为复制效果的对象。"
   FlavorText: "泰君打过来了我第一个投降"

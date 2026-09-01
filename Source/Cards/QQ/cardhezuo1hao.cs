@@ -37,8 +37,9 @@ namespace lvalonmeme.Cards
 			config.Colors = new List<ManaColor>() { ManaColor.Colorless };
             config.Cost = new ManaGroup { Any = 0 };
             config.Rarity = Rarity.Rare;
+            config.Mana = new ManaGroup { Philosophy = 1 };
 
-			config.Type = CardType.Skill;
+            config.Type = CardType.Skill;
 
             config.Keywords = config.UpgradedKeywords = Keyword.Exile | Keyword.Retain | Keyword.Initial | Keyword.Replenish;
             config.RelativeCards = config.UpgradedRelativeCards = new List<string>() { nameof(ToolBlock), nameof(ToolAmulet), nameof(ToolFirstAid) };
@@ -100,6 +101,20 @@ namespace lvalonmeme.Cards
                 return name.ToString();
             }
         }
+        public override ManaGroup? PlentifulMana
+        {
+            get
+            {
+                if (IsUpgraded)
+                {
+                    return new ManaGroup?(Mana);
+                }
+                else
+                {
+                    return new ManaGroup { Philosophy = 0 };
+                }
+            }
+        }
         public override void Initialize()
 		{
 			base.Initialize();
@@ -159,7 +174,7 @@ namespace lvalonmeme.Cards
         }
         private void OnDamageGiving(DamageEventArgs args)
         {
-            if (Zone == CardZone.Hand && args.DamageInfo.DamageType == DamageType.Attack && !args.DamageInfo.IsGrazed && IsUpgraded && modifier == (int)modifiers.Lucky && GameRun.BattleCardRng.Next(1) < 1)
+            if (Zone == CardZone.Hand && args.DamageInfo.DamageType == DamageType.Attack && !args.DamageInfo.IsGrazed && IsUpgraded && modifier == (int)modifiers.Lucky && GameRun.BattleCardRng.Next(99) < 4)
             {
                 var dmg = args.DamageInfo;
                 args.DamageInfo = new DamageInfo(dmg.Damage * 2, dmg.DamageBlocked, dmg.DamageShielded, dmg.DamageType, dmg.IsGrazed, dmg.IsAccuracy, dmg.DontBreakPerfect);
