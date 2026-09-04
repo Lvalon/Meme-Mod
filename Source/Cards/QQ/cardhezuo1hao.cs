@@ -9,7 +9,9 @@ using LBoL.Core.Cards;
 using LBoL.Core.Stations;
 using LBoL.Core.Units;
 using LBoL.EntityLib.Cards.Character.Sakuya;
+using LBoL.EntityLib.Cards.Enemy;
 using LBoL.EntityLib.Cards.Tool;
+using LBoL.EntityLib.StatusEffects.Neutral.TwoColor;
 using LBoL.Presentation;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.PersistentValues;
@@ -67,6 +69,7 @@ namespace lvalonmeme.Cards
             Arcane
         }
         public static int modifier;
+        private bool dodge;
         private string Warding => LocalizeProperty("Warding", true, false);
         private string Lucky => LocalizeProperty("Lucky", true, false);
         private string Menacing => LocalizeProperty("Menacing", true, false);
@@ -133,6 +136,7 @@ namespace lvalonmeme.Cards
             HandleBattleEvent(Battle.Player.DamageDealing, OnDamageDealing);
             HandleBattleEvent(Battle.Player.DamageGiving, new GameEventHandler<DamageEventArgs>(OnDamageGiving));
             ReactBattleEvent(Battle.Player.TurnStarted, new EventSequencedReactor<UnitEventArgs>(OnOwnerStarted));
+            ReactBattleEvent(Battle.Player.DamageReceived, new EventSequencedReactor<DamageEventArgs>(OnPlayerDamageReceived));
         }
 
         private IEnumerable<BattleAction> OnStatusEffectAdding(StatusEffectApplyEventArgs args)
@@ -151,18 +155,20 @@ namespace lvalonmeme.Cards
 			if (Zone == CardZone.Hand)
 			{
 				DamageInfo damageInfo = args.DamageInfo;
-				damageInfo.IsAccuracy = false;
 
-                if (damageInfo.DamageType == DamageType.Attack)
-				{
-					args.DamageInfo = damageInfo.ReduceBy(4);
+                if (damageInfo.IsAccuracy)
+                {
+                    dodge = true;
+                    damageInfo.IsAccuracy = false;
+                }
 
-					if (IsUpgraded && modifier == (int)modifiers.Warding)
-                        args.DamageInfo = args.DamageInfo.ReduceBy(4);
+                args.DamageInfo = damageInfo.ReduceBy(4);
 
-                    args.AddModifier(this);
-				}
-			}
+                if (IsUpgraded && modifier == (int)modifiers.Warding)
+                    args.DamageInfo = args.DamageInfo.ReduceBy(4);
+
+                args.AddModifier(this);
+            }
         }
         private void OnDamageDealing(DamageDealingEventArgs args)
         {
@@ -188,6 +194,17 @@ namespace lvalonmeme.Cards
                 NotifyActivating();
                 ManaGroup value = ManaGroup.Single(ManaColors.Colors.Sample(GameRun.BattleRng));
                 yield return new GainManaAction(value);
+            }
+            yield break;
+        }
+        private IEnumerable<BattleAction> OnPlayerDamageReceived(DamageEventArgs args)
+        {
+            if (dodge && args.DamageInfo.IsGrazed)
+            {
+                dodge = false;
+                yield return PerformAction.Chat(Battle.Player, LocalizeProperty("Dodge", true, false), 3f, 0f, 0f, true);
+                yield return PerformAction.Sfx("Dodge_1_1");
+                yield return PerformAction.Sfx("Dodge_1_2", 2f);
             }
             yield break;
         }

@@ -105,4 +105,4 @@ semathexhibit:
 
 semodifier:
   Name: 前綴
-  Brief: "升级时随机获得以下四种前綴之一并获得其效果。\n  護佑——{PlayerName}受到的攻击伤害降低 |n:4| 点。\n 幸運——{PlayerName}造成的攻击伤害有 |n:4|% 的概率提高 |n:100|%。\n  險惡——{PlayerName}造成的攻击伤害提高 |n:4| 点。\n 奧秘——{PlayerName}的回合开始时，获得一点随机法力。"
+  Brief: "升级时随机获得以下四种前綴之一并获得其效果。\n  護佑——{PlayerName}受到的伤害降低 |n:4| 点。\n 幸運——{PlayerName}造成的攻击伤害有 |n:4|% 的概率提高 |n:100|%。\n  險惡——{PlayerName}造成的攻击伤害提高 |n:4| 点。\n 奧秘——{PlayerName}的回合开始时，获得一点随机法力。"
