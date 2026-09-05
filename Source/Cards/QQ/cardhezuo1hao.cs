@@ -13,6 +13,7 @@ using LBoL.EntityLib.Cards.Enemy;
 using LBoL.EntityLib.Cards.Tool;
 using LBoL.EntityLib.StatusEffects.Neutral.TwoColor;
 using LBoL.Presentation;
+using LBoL.Presentation.Units;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.PersistentValues;
 using lvalonmeme.Cards.Template;
@@ -128,6 +129,22 @@ namespace lvalonmeme.Cards
         {
             if (Battle.Player.StatusEffects.Any(se => se.Type == StatusEffectType.Negative))
                 yield return new RemoveAllNegativeStatusEffectAction(Battle.Player, 0.2f);
+
+            foreach (var npc in Battle.AllAliveEnemies)
+            {
+                UnitView unitView = GameDirector.GetUnit(npc);
+                unitView.UpdateIntentions();
+            }
+        }
+        protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
+        {
+            foreach (var npc in Battle.AllAliveEnemies)
+            {
+                UnitView unitView = GameDirector.GetUnit(npc);
+                unitView.UpdateIntentions();
+            }
+
+            return base.Actions(selector, consumingMana, precondition);
         }
         protected override void OnEnterBattle(BattleController battle)
         {
@@ -201,11 +218,11 @@ namespace lvalonmeme.Cards
         {
             if (dodge && args.DamageInfo.IsGrazed)
             {
-                dodge = false;
                 yield return PerformAction.Chat(Battle.Player, LocalizeProperty("Dodge", true, false), 3f, 0f, 0f, true);
                 yield return PerformAction.Sfx("Dodge_1_1");
                 yield return PerformAction.Sfx("Dodge_1_2", 2f);
             }
+            dodge = false;
             yield break;
         }
     }
