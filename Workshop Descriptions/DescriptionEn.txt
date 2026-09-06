@@ -4,7 +4,7 @@ Contains meme (community-suggested) cards and some old cards from older versions
 
 [h1]Includes[/h1]
 [list]
-[*]Meme Cards: 25
+[*]Meme Cards: 26
 [*]Historic Cards: 24+1
 [*]Booster packs: 2
 [*]Jadeboxes: 6
