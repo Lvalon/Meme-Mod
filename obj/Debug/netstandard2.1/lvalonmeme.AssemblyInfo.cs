@@ -19,7 +19,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lvalonmeme")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5038df119c5f8e1734a345934d80bd17011482b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+469ccb831dd047331d2d9360f5d732f30a0640a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("lvalonmeme")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lvalonmeme")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

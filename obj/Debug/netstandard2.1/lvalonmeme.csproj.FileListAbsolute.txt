@@ -96,7 +96,6 @@
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/UnityEngine.WindModule.dll
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/UnityEngine.ARModule.dll
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/mcs.dll
-/Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/ScriptEngine.dll
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/System.CodeDom.dll
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/Unity.Mathematics.dll
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/Unity.Collections.dll
@@ -115,3 +114,4 @@
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/obj/Debug/netstandard2.1/lvalonmeme.dll
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/obj/Debug/netstandard2.1/lvalonmeme.pdb
 /Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/obj/Debug/netstandard2.1/lvalonmeme.sourcelink.json
+/Users/e/Desktop/tachyon transmigration/projects/indev/lvalonmeme/bin/Debug/netstandard2.1/LBoL-Entity-Sideloader.xml
