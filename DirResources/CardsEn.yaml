@@ -301,3 +301,15 @@ cardendofturn:
   Name: End of turn
   DetailText: "{SelfName} cannot be randomly generated in combat, and cannot be copied."
   FlavorText: Its the Heart of The Cards, obviously.
+
+cardhezuo1hao:
+  Description: "|手牌中|：{PlayerName}免疫于所有负面状态，无视精准攻击，受到的伤害降低 |n:4| 点。\n|合成|：如果牌库中有|防暴盾|、|一次性护符|和|急救箱|且牌库中没有{SelfName}，分别将其移除牌库各一张，将{SelfName}加入牌库"
+  UpgradedDescription: "|手牌中|：{PlayerName}免疫于所有负面状态，无视精准攻击，受到的伤害降低 |n:4| 点。\n|合成|：如果牌库中有|防暴盾|、|一次性护符|和|急救箱|且牌库中没有{SelfName}，分别将其移除牌库各一张，将{SelfName}加入牌库。\n<b>限定技，锁定技，</b>当{SelfName}因为抽牌动作进入手牌时，你获得一点{Mana}。当你的回合结束时，重置此技能。"
+  Name: "Ankh Shield"
+  DetailText: "{SelfName} cannot be randomly generated in combat, and cannot be copied."
+  FlavorText: "泰君打过来了我第一个投降"
+  Dodge: "怎么，打不中吗？"
+  Warding: "Warding "
+  Lucky: "Lucky "
+  Menacing: "Menacing "
+  Arcane: "Arcane "

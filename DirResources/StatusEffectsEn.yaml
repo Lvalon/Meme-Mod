@@ -104,3 +104,7 @@ searashidad:
 semathexhibit:
   Name: Math Analyzing
   Description: "At the end of this battle, gain the |Math Analyzer| exhibit, with it {PlayerName}'s attacks are |Accurate|, if they are already |Accurate| then increase their damage by |n:3|."
+
+ semodifier:
+  Name: Modifier
+  Brief: "升级时随机获得以下四种Modifiers之一并获得其效果。\n  Warding——{PlayerName}受到的伤害降低 |n:4| 点。\n Lucky——{PlayerName}造成的攻击伤害有 |n:4|% 的概率提高 |n:100|%。\n  Menacing——{PlayerName}造成的攻击伤害提高 |n:4| 点。\n Arcane——{PlayerName}的回合开始时，获得一点随机法力。"

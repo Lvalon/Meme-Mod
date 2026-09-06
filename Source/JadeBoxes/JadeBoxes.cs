@@ -247,6 +247,8 @@ namespace lvalonmeme.JadeBoxes
 				public ManaColor? ManaColor { get; set; }
 				protected override void OnGain(GameRunController gameRun)
 				{
+					bool retain = GameRun.JadeBoxes.Any(jb => jb.Id == nameof(JadeBox5Color) || jb.Id == nameof(JadeBox7Color));
+					ManaGroup BaseMana = GameRun.BaseMana;
 					ManaColor = GameRun.Player.Exhibits.First(e => e.Config.Rarity == Rarity.Shining).Config.BaseManaColor ?? GameRun.BaseMana.EnumerateComponents().ToList().Sample(gameRun.RootRng);
 					//GameRun.BaseMana = new ManaGroup() { White = 1, Blue = 1, Black = 1, Red = 1, Green = 1 };
 					GameRun.Player.RemoveExhibit(GameRun.Player.Exhibits.First(e => e.Config.Rarity == Rarity.Shining));
@@ -254,7 +256,11 @@ namespace lvalonmeme.JadeBoxes
 					rolled ??= gameRun.RollShiningExhibit(gameRun.ShiningExhibitRng, null, config => config.Id.ToLowerInvariant() == "kongbaikapai");
 					gameRun.GainExhibitInstantly(rolled, false, null);
 					//GameMaster.DebugGainExhibit(rolled);
-					if (ManaColor != null)
+					if (retain)
+					{
+						GameRun.BaseMana = BaseMana;
+					}
+					else if (ManaColor != null)
 					{
 						GameRun.BaseMana -= ManaGroup.FromColor((ManaColor)ManaColor, 1);
 					}

@@ -1,30 +1,33 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
+using Cysharp.Threading.Tasks;
 using HarmonyLib;
 using LBoL.Base;
+using LBoL.ConfigData;
 using LBoL.Core;
-using LBoL.EntityLib.EnemyUnits.Character;
-using LBoLEntitySideloader;
-using LBoLEntitySideloader.Entities;
-using LBoLEntitySideloader.Resource;
-using lvalonmeme.Cards.Template;
-using lvalonmeme.Config;
-using System;
-using System.Collections.Generic;
-using LBoLEntitySideloader.CustomHandlers;
-using System.Reflection;
-using UnityEngine;
-using lvalonmeme.Cards;
-using LBoLEntitySideloader.PersistentValues;
-using LBoL.Presentation;
-using System.Linq;
 using LBoL.EntityLib.Adventures;
-using lvalonmeme.JadeBoxes;
-using Yarn;
-using UnityEngine.Events;
+using LBoL.EntityLib.EnemyUnits.Character;
+using LBoL.EntityLib.JadeBoxes;
+using LBoL.Presentation;
 using LBoL.Presentation.UI.Panels;
 using LBoL.Presentation.UI.Widgets;
-using LBoL.EntityLib.JadeBoxes;
+using LBoLEntitySideloader;
+using LBoLEntitySideloader.CustomHandlers;
+using LBoLEntitySideloader.Entities;
+using LBoLEntitySideloader.PersistentValues;
+using LBoLEntitySideloader.Resource;
+using lvalonmeme.Cards;
+using lvalonmeme.Cards.Template;
+using lvalonmeme.Config;
+using lvalonmeme.JadeBoxes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using UnityEngine;
+using UnityEngine.Events;
+using Yarn;
+using static LBoL.Presentation.AudioManager;
 
 
 namespace lvalonmeme
@@ -317,9 +320,18 @@ namespace lvalonmeme
 				cardImages.AutoLoad(cardartid + 2, ImageLoader.SampleCharacterImageLoader.file_extension, relativePath: "Resources.Cards.");
 				ResourcesHelper.CardImages.AlwaysAdd(cardartid + 2, cardImages.main);
 			}
-		}
-		//patches
-		[HarmonyPatch(typeof(Debut), nameof(Debut.InitVariables))]
+			LoadDodgeSound();
+        }
+        private async void LoadDodgeSound()
+        {
+            SfxEntry sfxEntry = new SfxEntry(0.3f, 1f, await ResourceLoader.LoadAudioClip("Dodge_1_1.wav", AudioType.WAV, directorySource));
+			Singleton<AudioManager>.Instance._sfxTable.AlwaysAdd("Dodge_1_1", sfxEntry);
+			
+			sfxEntry = new SfxEntry(0.3f, 1f, await ResourceLoader.LoadAudioClip("Dodge_1_2.wav", AudioType.WAV, directorySource));
+            Singleton<AudioManager>.Instance._sfxTable.AlwaysAdd("Dodge_1_2", sfxEntry);
+        }
+        //patches
+        [HarmonyPatch(typeof(Debut), nameof(Debut.InitVariables))]
 		private class Debut_InitVariables_Patch
 		{
 			private static void Postfix(Debut __instance, ref IVariableStorage storage)
@@ -425,15 +437,25 @@ namespace lvalonmeme
 		//PERSISTENT VALUES
 		public class lvalonmemedata : CustomGameRunSaveData
 		{
-			public override void Restore(GameRunController gameRun)
+			public int modifier;
+			public int CanReward;
+
+            public override void Restore(GameRunController gameRun)
 			{
 				//log.LogDebug("lvalonmeme bepinex restoring");
-			}
+				cardhezuo1hao.modifier = modifier;
+				cardlvalon.CanReward = CanReward;
+                Stage_GetEnemyCardReward_PostPatch.canReward = -1;
+                Stage_GetEliteEnemyCardReward_PostPatch.canReward = -1;
+                Stage_GetBossCardReward_PostPatch.canReward = -1;
+            }
 
 			public override void Save(GameRunController gameRun)
 			{
 				//log.LogDebug("lvalonmeme bepinex saving");
 				//youmiplayed = 1;
+				modifier = cardhezuo1hao.modifier;
+				CanReward = cardlvalon.CanReward;
 			}
 			//public int youmiplayed;
 		}

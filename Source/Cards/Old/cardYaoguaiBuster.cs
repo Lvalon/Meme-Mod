@@ -59,17 +59,17 @@ namespace lvalonmeme.Cards
 			{
 				CardGuns = new Guns(new string[3]
 				{
-				Config.GunNameBurst,
-				Config.GunName,
-				Config.GunNameBurst
-				});
+                    "妖怪破坏者",
+                    "妖怪破坏者B",
+                    "妖怪破坏者",
+                });
 			}
 			else
 			{
 				CardGuns = new Guns(new string[2]
 				{
-				Config.GunName,
-				Config.GunNameBurst
+					"妖怪破坏者",
+					"妖怪破坏者B"
 				});
 			}
 

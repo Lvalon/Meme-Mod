@@ -1,16 +1,21 @@
+using HarmonyLib;
 using LBoL.Base;
 using LBoL.ConfigData;
-using LBoLEntitySideloader.Attributes;
-using System.Collections.Generic;
-using lvalonmeme.Cards.Template;
-using LBoL.Core.Battle;
 using LBoL.Core;
+using LBoL.Core.Battle;
 using LBoL.Core.Cards;
-using System.Linq;
 using LBoL.Core.Stations;
+using LBoL.EntityLib.Adventures;
+using LBoL.Presentation;
+using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Resource;
-using lvalonmeme.StatusEffects;
+using lvalonmeme.Cards.Template;
 using lvalonmeme.Packs;
+using lvalonmeme.StatusEffects;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
 namespace lvalonmeme.Cards
 {
@@ -55,7 +60,8 @@ namespace lvalonmeme.Cards
 	[EntityLogic(typeof(cardlvalonDef))]
 	public sealed class cardlvalon : lvalonmemecard.memecard
 	{
-		public override ManaGroup? PlentifulMana
+		public static int CanReward;
+        public override ManaGroup? PlentifulMana
 		{
 			get
 			{
@@ -69,40 +75,85 @@ namespace lvalonmeme.Cards
 				}
 			}
 		}
+        public override void Initialize()
+        {
+            base.Initialize();
+        }
 		protected override void OnEnterBattle(BattleController battle)
 		{
-			ReactBattleEvent(Battle.BattleEnding, new EventSequencedReactor<GameEventArgs>(OnBattleEnding));
+			HandleBattleEvent(Battle.BattleEnding, OnBattleEnding);
 		}
 
-		private IEnumerable<BattleAction> OnBattleEnding(GameEventArgs args)
+		private void OnBattleEnding(GameEventArgs args)
 		{
-			EnemyType enemyType = Battle.EnemyGroup.EnemyType;
-			List<Card> list = (from card in Battle.EnumerateAllCardsButExile()
-							   where card == this
-							   select card).ToList();
-			if (list.Count > 0)
-			{
-				switch (GameRun.CurrentStation.Type)
-				{
-					case StationType.Boss:
-						NotifyActivating();
-						GameRun.CurrentStation.AddReward(GameRun.CurrentStage.GetBossCardReward());
-						break;
-					case StationType.EliteEnemy:
-						NotifyActivating();
-						GameRun.CurrentStation.AddReward(GameRun.CurrentStage.GetEliteEnemyCardReward());
-						break;
-					case StationType.Enemy:
-						NotifyActivating();
-						GameRun.CurrentStation.AddReward(GameRun.CurrentStage.GetEnemyCardReward());
-						break;
-					default:
-						break;
-				}
-			}
-			yield break;
+			if (Zone != CardZone.Exile)
+                CanReward++;
 		}
-	}
+    }
+    [HarmonyPatch(typeof(Stage), nameof(Stage.GetEnemyCardReward))]
+    class Stage_GetEnemyCardReward_PostPatch
+    {
+        public static int canReward = -1;
+        static bool Prefix(Stage __instance)
+		{
+            if (canReward == -1)
+                canReward = cardlvalon.CanReward;
+
+            if (canReward > 0)
+            {
+                canReward--;
+                Singleton<GameMaster>.Instance.CurrentGameRun.CurrentStation.AddReward(__instance.GetEnemyCardReward());
+            }
+            return true;
+		}
+        static void Postfix(Stage __instance)
+        {
+			canReward = -1;
+        }
+    }
+    [HarmonyPatch(typeof(Stage), nameof(Stage.GetEliteEnemyCardReward))]
+    class Stage_GetEliteEnemyCardReward_PostPatch
+    {
+        public static int canReward = -1;
+        static void Postfix(Stage __instance)
+        {
+            if (canReward == -1)
+                canReward = cardlvalon.CanReward;
+
+            if (canReward > 0)
+            {
+                canReward--;
+                Singleton<GameMaster>.Instance.CurrentGameRun.CurrentStation.AddReward(__instance.GetEliteEnemyCardReward());
+            }
+        }
+    }
+    [HarmonyPatch(typeof(Stage), nameof(Stage.GetBossCardReward))]
+    class Stage_GetBossCardReward_PostPatch
+    {
+        public static int canReward = -1;
+        static void Postfix(Stage __instance)
+        {
+            if (canReward == -1)
+                canReward = cardlvalon.CanReward;
+
+            if (canReward > 0)
+            {
+                canReward--;
+                Singleton<GameMaster>.Instance.CurrentGameRun.CurrentStation.AddReward(__instance.GetBossCardReward());
+            }
+        }
+    }
+    [HarmonyPatch(typeof(GameRunController), nameof(GameRunController.EnterBattle))]
+    class GameRunController_EnterBattle_PostPatch
+    {
+        static void Postfix(Stage __instance)
+        {
+            cardlvalon.CanReward = 0;
+            Stage_GetEnemyCardReward_PostPatch.canReward = -1;
+            Stage_GetEliteEnemyCardReward_PostPatch.canReward = -1;
+            Stage_GetBossCardReward_PostPatch.canReward = -1;
+        }
+    }
 }
 
 

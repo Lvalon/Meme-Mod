@@ -52,19 +52,22 @@ namespace lvalonmeme.Cards
 	{
 		protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
 		{
-			List<Card> cards = new List<Card>();
-			foreach (Card card in Battle.EnumerateAllCardsButExile().Where(c => c.IsBasic))
-			{
-				cards.Add(card);
-			}
-			yield return new ExileManyCardAction(cards);
-			yield return new AddCardsToDrawZoneAction(Library.CreateCards<MarisaSteal>(1, false), DrawZoneTarget.Random, AddCardsType.Normal);
-			yield return new AddCardsToDrawZoneAction(Library.CreateCards<PotionDefense>(1, false), DrawZoneTarget.Random, AddCardsType.Normal);
-			yield return new ApplyStatusEffectAction<se9999>(Battle.Player, Value2, null, null, null, 0f, true);
 			if (IsUpgraded)
 			{
 				yield return new DrawManyCardAction(Value1);
 			}
+			else
+			{
+                List<Card> cards = new List<Card>();
+                foreach (Card card in Battle.EnumerateAllCardsButExile().Where(c => c.IsBasic))
+                {
+                    cards.Add(card);
+                }
+                yield return new ExileManyCardAction(cards);
+                yield return new AddCardsToDrawZoneAction(Library.CreateCards<MarisaSteal>(1, false), DrawZoneTarget.Random, AddCardsType.Normal);
+                yield return new AddCardsToDrawZoneAction(Library.CreateCards<PotionDefense>(1, false), DrawZoneTarget.Random, AddCardsType.Normal);
+                yield return new ApplyStatusEffectAction<se9999>(Battle.Player, Value2, null, null, null, 0f, true);
+            }
 			yield break;
 		}
 	}
