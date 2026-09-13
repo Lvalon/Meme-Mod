@@ -266,8 +266,8 @@ cardiwoption3:
 
 cardfarming:
   Name: LBoL - 授昌
-  Description: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection| or |Unmoving Great Library|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}."
-  UpgradedDescription: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection| or |Unmoving Great Library|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}.\nIf the enemy is |Clownpiece|, gain {Value2} <sprite=\"Point\" name=\"Power\">."
+  Description: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection|, |Unmoving Great Library| or |授昌|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}."
+  UpgradedDescription: "If the |library| has any of |Call on Friends|, |Breaking Boundaries|, |Shikigami Protection|, |Unmoving Great Library| or |授昌|, at the end of the battle, restore all life and increase |Play Time| by {Value1} minute{Value1:plural one='' other='s'}.\nIf the enemy is |Clownpiece|, gain {Value2} <sprite=\"Point\" name=\"Power\">."
   FlavorText: Am I playing the game, or is the game playing me?
 
 cardarashidad:
