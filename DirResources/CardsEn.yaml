@@ -18,9 +18,8 @@ cardanlemi:
 
 cardaleph:
   Name: ℵ
-  Description: "|Swap starting exhibit|.\nAfter {SelfName} is played, it is removed from combat and the library."
-  UpgradedDescription: "|Swap starting exhibit|.\nGain a non-|Shining| exhibit.\nAfter {SelfName} is played, it is removed from combat and the library."
-  DetailText: "{SelfName} cannot be randomly generated in combat, and cannot be copied."
+  Description: "|Swap starting exhibit|.."
+  UpgradedDescription: "|Swap starting exhibit|.\nGain a non-|Shining| exhibit."
   FlavorText: "I give it a 9/10\n(Translated by Lvalon)"
 
 cardkotk:
@@ -38,9 +37,9 @@ cardyanling:
 
 cardedoras:
   Name: Edoras
-  Description: "Gain <sprite=\"Point\" name=\"Gold\"> equal the |number of days procrastinating writing a guide|.({days} <sprite=\"Point\" name=\"Gold\">)\nAfter {SelfName} is played, it is removed from combat and the library."
-  UpgradedDescription: "Gain <sprite=\"Point\" name=\"Gold\"> equal the |number of days procrastinating writing a guide|.({days} <sprite=\"Point\" name=\"Gold\">)\nConverts the next stage to be |Takane's Shop|.\nAfter {SelfName} is played, it is removed from combat and the library."
-  DetailText: "{SelfName} cannot be randomly generated in combat, and cannot be copied.\nAfter arriving the next stage, if you |Restart|, the 2hus responsible for the original stage will take over."
+  Description: "Gain <sprite=\"Point\" name=\"Gold\"> equal the |number of days procrastinating writing a guide|.({days} <sprite=\"Point\" name=\"Gold\">)"
+  UpgradedDescription: "Gain <sprite=\"Point\" name=\"Gold\"> equal the |number of days procrastinating writing a guide|.({days} <sprite=\"Point\" name=\"Gold\">)\nConverts the next stage to be |Takane's Shop|."
+  DetailText: "After arriving the next stage, if you |Restart|, the 2hus responsible for the original stage will take over."
   FlavorText: "Please write lil Edoras, its been {days} since 2024/12/28, the date where you first started procrastinating.\n(Translated by Lvalon)"
 
 card9999:
@@ -278,7 +277,7 @@ cardarashidad:
 
 cardmathexhibit:
   Name: Math Analyzing Book
-  Description: "At the end of this battle, gain the |Math Analyzer| exhibit, with it {PlayerName}'s attacks are |Accurate|, if they are already |Accurate| then increase their damage by {Value1}.\nAfter {SelfName} is played, it is removed from combat and the library."
+  Description: "At the end of this battle, gain the |Math Analyzer| exhibit, with it {PlayerName}'s attacks are |Accurate|, if they are already |Accurate| then increase their damage by {Value1}."
   FlavorText: "⑨"
 
 cardtfm:

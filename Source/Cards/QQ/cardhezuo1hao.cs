@@ -263,15 +263,17 @@ namespace lvalonmeme.Cards
                     materials.Add(card);
                 }
 
-				if (card is cardhezuo1hao)
-					return;
+                if (card is cardhezuo1hao)
+                {
+                    cardhezuo1hao.modifier = new System.Random((int)__instance.RootSeed).Next(1, 5);
+                    return;
+                }
             }
 
 			if (materials.Count == 3)
 			{
 				__instance.RemoveDeckCards(materials);
 				__instance.AddDeckCard(Library.CreateCard<cardhezuo1hao>());
-                cardhezuo1hao.modifier = new System.Random((int)__instance.RootSeed).Next(1, 5);
             }
 		}
 	}

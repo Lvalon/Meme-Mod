@@ -18,9 +18,8 @@ cardanlemi:
 
 cardaleph:
   Name: ℵ
-  Description: "|換四|。\n{SelfName}打出後移出戰鬥和牌庫。"
-  UpgradedDescription: "|換四|。\n獲得一個隨機非|光耀|展品。\n{SelfName}打出後移出戰鬥和牌庫。"
-  DetailText: "{SelfName}不會在戰鬥中被隨機獲得，不能成為複製效果的對象。"
+  Description: "|換四|。"
+  UpgradedDescription: "|換四|。\n獲得一個隨機非|光耀|展品。"
   FlavorText: "9分卡"
 
 cardkotk:
@@ -38,9 +37,9 @@ cardyanling:
 
 cardedoras:
   Name: Edoras
-  Description: "獲得相當於|攻略拖更天數|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n{SelfName}打出後移出戰鬥和牌庫。"
-  UpgradedDescription: "獲得相當於|攻略拖更天數|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n下一關強制變化為|商店|。\n{SelfName}打出後移出戰鬥和牌庫。"
-  DetailText: "{SelfName} 不會在戰鬥中被隨機獲得，不能成為複製效果的對象。\n抵達下一關後如果重開當前關卡，原本負責該關卡的人物將會取回該關卡。"
+  Description: "獲得相當於|攻略拖更天數|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）"
+  UpgradedDescription: "獲得相當於|攻略拖更天數|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n下一關強制變化為|商店|。"
+  DetailText: "抵達下一關後如果重開當前關卡，原本負責該關卡的人物將會取回該關卡。"
   FlavorText: "哈基E快寫，從2024年12月28日開始都拖更 {days} 天了"
 
 card9999:
@@ -262,7 +261,7 @@ cardarashidad:
 
 cardmathexhibit:
   Name: 數學分析之書
-  Description: "這場戰鬥結束後獲得展品|數學分析器|，使{PlayerName}的攻擊具有|精準|，如已為|精準|則傷害提高 {Value1} 點。\n{SelfName}打出後移出戰鬥和牌庫。"
+  Description: "這場戰鬥結束後獲得展品|數學分析器|，使{PlayerName}的攻擊具有|精準|，如已為|精準|則傷害提高 {Value1} 點。"
   FlavorText: "⑨"
 
 cardtfm:
