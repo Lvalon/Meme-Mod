@@ -36,8 +36,7 @@ namespace lvalonmeme.Cards
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(CallFriends), nameof(OutInGap), nameof(LanCard), nameof(PatchouliLibrary) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(CallFriends), nameof(OutInGap), nameof(LanCard), nameof(PatchouliLibrary) };
+			config.RelativeCards = config.UpgradedRelativeCards = new List<string>() { nameof(CallFriends), nameof(OutInGap), nameof(LanCard), nameof(PatchouliLibrary), nameof(cardshouchang) };
 			config.UpgradedKeywords = Keyword.Power;
 			config.RelativeEffects = new List<string>() { nameof(sememe) };
 			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
@@ -56,7 +55,7 @@ namespace lvalonmeme.Cards
 	{
 		protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
 		{
-			if (GameRun.BaseDeck.Any(c => c is CallFriends || c is OutInGap || c is LanCard || c is PatchouliLibrary))
+			if (GameRun.BaseDeck.Any(c => c is CallFriends || c is OutInGap || c is LanCard || c is PatchouliLibrary || c is cardshouchang))
 			{
 				yield return BuffAction<RangziFanshuSe>(999);
 				GameRun.PlayedSeconds += Value1 * 60;

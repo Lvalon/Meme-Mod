@@ -32,7 +32,8 @@ namespace lvalonmeme.Cards
 
 			config.Illustrator = "問他";
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
+            config.Keywords = config.UpgradedKeywords = Keyword.Disposable;
+            config.RelativeEffects = new List<string>() { nameof(sememe) };
 			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
 
 			config.Pack = nameof(packmemeDef)[..^3];

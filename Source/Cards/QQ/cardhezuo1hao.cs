@@ -44,7 +44,8 @@ namespace lvalonmeme.Cards
 
             config.Type = CardType.Skill;
 
-            config.Keywords = config.UpgradedKeywords = Keyword.Exile | Keyword.Retain | Keyword.Initial | Keyword.Replenish;
+            config.Keywords = Keyword.Exile | Keyword.Retain | Keyword.Initial;
+            config.UpgradedKeywords = Keyword.Exile | Keyword.Retain | Keyword.Initial | Keyword.Replenish | Keyword.Plentiful;
             config.RelativeCards = config.UpgradedRelativeCards = new List<string>() { nameof(ToolBlock), nameof(ToolAmulet), nameof(ToolFirstAid) };
             config.RelativeEffects = new List<string>() { nameof(sememe) };
 			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe), nameof(semodifier) };
@@ -123,6 +124,7 @@ namespace lvalonmeme.Cards
 		{
 			base.Initialize();
 
+            SetKeyword(Keyword.Plentiful, false);
             if (modifier == 0) modifier = 1;
         }
         public override IEnumerable<BattleAction> OnDraw()
@@ -136,7 +138,7 @@ namespace lvalonmeme.Cards
                 unitView.UpdateIntentions();
             }
         }
-        protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
+        public override IEnumerable<BattleAction> OnDiscard(CardZone srcZone)
         {
             foreach (var npc in Battle.AllAliveEnemies)
             {
@@ -144,7 +146,19 @@ namespace lvalonmeme.Cards
                 unitView.UpdateIntentions();
             }
 
-            return base.Actions(selector, consumingMana, precondition);
+            return base.OnDiscard(srcZone);
+        }
+
+        // Token: 0x06000D5E RID: 3422 RVA: 0x000196EE File Offset: 0x000178EE
+        public override IEnumerable<BattleAction> OnExile(CardZone srcZone)
+        {
+            foreach (var npc in Battle.AllAliveEnemies)
+            {
+                UnitView unitView = GameDirector.GetUnit(npc);
+                unitView.UpdateIntentions();
+            }
+
+            return base.OnExile(srcZone);
         }
         protected override void OnEnterBattle(BattleController battle)
         {
@@ -249,15 +263,17 @@ namespace lvalonmeme.Cards
                     materials.Add(card);
                 }
 
-				if (card is cardhezuo1hao)
-					return;
+                if (card is cardhezuo1hao)
+                {
+                    cardhezuo1hao.modifier = new System.Random((int)__instance.RootSeed).Next(1, 5);
+                    return;
+                }
             }
 
 			if (materials.Count == 3)
 			{
 				__instance.RemoveDeckCards(materials);
 				__instance.AddDeckCard(Library.CreateCard<cardhezuo1hao>());
-                cardhezuo1hao.modifier = new System.Random((int)__instance.RootSeed).Next(1, 5);
             }
 		}
 	}

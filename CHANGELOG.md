@@ -1,5 +1,17 @@
 # 更新日志 / Changelog
 
+## [0.0.31] - 2026-9-6
+
+### 修复 / Fixed
+
+- 一些 bug。
+- Some bugs.
+
+### 新增 / Added
+
+- QQ 群友牌数量提升至 26 张。
+- Number of QQ community member cards increased to 26.
+
 ## [0.0.30] - 2026-1-3
 
 ### 修复 / Fixed
@@ -248,6 +260,7 @@
 - 初代 QQ 群友牌完成（8 张）。
 - First generation of QQ community member (meme) cards completed (8 cards).
 
+[0.0.31]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.31/
 [0.0.30]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.30/
 [0.0.29]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.29/
 [0.0.28]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.28/

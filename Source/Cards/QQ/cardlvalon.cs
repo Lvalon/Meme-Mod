@@ -41,7 +41,7 @@ namespace lvalonmeme.Cards
 
 			config.Type = CardType.Skill;
 			config.Keywords = Keyword.Forbidden | Keyword.Ethereal;
-			config.UpgradedKeywords = Keyword.Forbidden | Keyword.Replenish;
+			config.UpgradedKeywords = Keyword.Forbidden | Keyword.Replenish | Keyword.Plentiful;
 
 			config.RelativeEffects = new List<string>() { nameof(sememe) };
 			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
@@ -78,6 +78,7 @@ namespace lvalonmeme.Cards
         public override void Initialize()
         {
             base.Initialize();
+            SetKeyword(Keyword.Plentiful, false);
         }
 		protected override void OnEnterBattle(BattleController battle)
 		{

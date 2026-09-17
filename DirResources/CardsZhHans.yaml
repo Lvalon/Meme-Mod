@@ -18,9 +18,8 @@ cardanlemi:
 
 cardaleph:
   Name: ℵ
-  Description: "|换四|。\n{SelfName}打出后移出战斗和牌库。"
-  UpgradedDescription: "|换四|。\n获得一个随机非|光耀|展品。\n{SelfName}打出后移出战斗和牌库。"
-  DetailText: "{SelfName}不会在战斗中被随机获得，不能成为复制效果的对象。"
+  Description: "|换四|。"
+  UpgradedDescription: "|换四|。\n获得一个随机非|光耀|展品。"
   FlavorText: "9分卡"
 
 cardkotk:
@@ -38,9 +37,9 @@ cardyanling:
 
 cardedoras:
   Name: Edoras
-  Description: "获得相当于|攻略拖更天数|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n{SelfName}打出后移出战斗和牌库。"
-  UpgradedDescription: "获得相当于|攻略拖更天数|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n下一关强制变化为|商店|。\n{SelfName}打出后移出战斗和牌库。"
-  DetailText: "{SelfName} 不会在战斗中被随机获得，不能成为复制效果的对象。\n抵达下一关后如果重开当前关卡，原本负责该关卡的人物将会取回该关卡。"
+  Description: "获得相当于|攻略拖更天数|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）"
+  UpgradedDescription: "获得相当于|攻略拖更天数|的<sprite=\"Point\" name=\"Gold\">。（{days} <sprite=\"Point\" name=\"Gold\">）\n下一关强制变化为|商店|。"
+  DetailText: "抵达下一关后如果重开当前关卡，原本负责该关卡的人物将会取回该关卡。"
   FlavorText: "哈基E快写，从2024年12月28日开始都拖更 {days} 天了"
 
 card9999:
@@ -250,8 +249,8 @@ cardiwoption3:
 
 cardfarming:
   Name: 光耀夜·授昌
-  Description: "如果|牌库|中有|呼朋唤友|、|出入境界|、|式神护法|或|不动的大图书馆|其中一张，战斗结束时回复所有生命值，并使|调查花费时间|增加 {Value1} 分钟。"
-  UpgradedDescription: "如果|牌库|中有|呼朋唤友|、|出入境界|、|式神护法|或|不动的大图书馆|其中一张，战斗结束时回复所有生命值，并使|调查花费时间|增加 {Value1} 分钟。\n如果敌人是|克劳恩皮丝|，获得 {Value2} 点<sprite=\"Point\" name=\"Power\">。"
+  Description: "如果|牌库|中有|呼朋唤友|、|出入境界|、|式神护法|、|不动的大图书馆|或|授昌|其中一张，战斗结束时回复所有生命值，并使|调查花费时间|增加 {Value1} 分钟。"
+  UpgradedDescription: "如果|牌库|中有|呼朋唤友|、|出入境界|、|式神护法|、|不动的大图书馆|或|授昌|其中一张，战斗结束时回复所有生命值，并使|调查花费时间|增加 {Value1} 分钟。\n如果敌人是|克劳恩皮丝|，获得 {Value2} 点<sprite=\"Point\" name=\"Power\">。"
   FlavorText: "到底是我在玩游戏 还是游戏在玩我"
 
 cardarashidad:
@@ -262,7 +261,7 @@ cardarashidad:
 
 cardmathexhibit:
   Name: 数学分析之书
-  Description: "这场战斗结束后获得展品|数学分析器|，使{PlayerName}的攻击具有|精准|，如已为|精准|则伤害提高 {Value1} 点。\n{SelfName}打出后移出战斗和牌库。"
+  Description: "这场战斗结束后获得展品|数学分析器|，使{PlayerName}的攻击具有|精准|，如已为|精准|则伤害提高 {Value1} 点。"
   FlavorText: "⑨"
 
 cardtfm:
