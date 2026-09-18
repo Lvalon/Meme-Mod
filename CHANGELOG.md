@@ -1,5 +1,19 @@
 # 更新日志 / Changelog
 
+## [0.0.32] - 2026-9-18
+
+### 修复 / Fixed
+
+- 一些 bug。
+- Some bugs.
+
+### 改动 / Changes
+
+- 模组卡牌适配一次性关键词
+- 光耀夜·授昌现在将授昌作为条件可选项
+- Cards are now compatible with the Vanish keyword.
+- LBoL - 授昌 will now trigger if 授昌 exists.
+
 ## [0.0.31] - 2026-9-6
 
 ### 修复 / Fixed
@@ -260,6 +274,7 @@
 - 初代 QQ 群友牌完成（8 张）。
 - First generation of QQ community member (meme) cards completed (8 cards).
 
+[0.0.32]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.32/
 [0.0.31]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.31/
 [0.0.30]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.30/
 [0.0.29]: https://thunderstore.io/package/download/Lvalon/Everyone_Is_Here/0.0.29/

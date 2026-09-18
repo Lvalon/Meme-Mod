@@ -3,9 +3,9 @@
     "Description": "(EN/繁/简)\nCrazy general meme mod.\n神金综合整活模组。",
     "Brief": "(EN/繁/简)\nCrazy general meme mod.\n神金综合整活模组。",
     "Changelog": [
-        "v0.0.31:\nadd new crad.\nView the full changelog in CHANGELOG.md."
+        "v0.0.32:\nCards are now compatible with the Vanish keyword.\nView the full changelog in CHANGELOG.md."
     ],
-    "Version": "0.0.31",
+    "Version": "0.0.32",
     "Author": "Lvalon, hezuo1hao",
     "Tags": [
         "Content"
